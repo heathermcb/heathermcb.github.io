@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+.nav-dropdown-content {
+  color: #F0A202;
+  background-color: #14213d;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #14213d;
+}
+
+.nav-dropdown-content a{
+  color: #F0A202;
+}
+
+.nav-dropdown .nav-dropbtn {
+  color: #F0A202;
+}
+
+.distill-site-nav {
+  color: #F0A202;
+  font-weight: bold;
+  background-color: #14213d;
+}
+
+.distill-site-nav a:hover {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  color: #283044;
+}
+
+h2 {
+  color: #283044;
+}
+
+d-article h2 {
+	border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Use specific font in the body of the text */
+html, body, p {
+  
+  font-family: 'Raleway', sans-serif;
+
+  
+}

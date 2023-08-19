@@ -1,0 +1,68 @@
+---
+title: "Teaching"
+description: |
+  My teaching is informed not only by my time in academia, but also by my experience working at my own start-up and in government. My approach is best characterised as practical, research-based, and emphasising workflow. I am an [RStudio Certified Tidyverse Trainer](https://education.rstudio.com/trainers) and I enjoy teaching students from a wide range of backgrounds. I co-lead the development of a package to help students learn R, available here: [DoSS Toolkit](https://www.dosstoolkit.com). My book, *[Telling Stories with Data](https://www.tellingstorieswithdata.com/)* supports my teaching.
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 1    
+---
+
+# Course material 
+
+I have designed and taught:
+
+- [Worlds Become Data](worlds.html)
+- [Surveys, Sampling and Observational Data](sta304.html)
+- [Experimental Design](inf2178.html)
+- [Ethics and Data Science](reading_course-ethics.html)
+- [Natural Language Processing](reading_course-nlp.html)
+- [Data Sciences Foundations](foundations_of_the_data_sciences.html)
+- [The Other Course](the_other_course.html)
+- [History of Statistics and Data Sciences](history_of_the_data_sciences.html)
+
+# Teaching experience
+
+### University of Toronto
+
+* Instructor, 'STA304: Surveys, Sampling and Observational Data', Department of Statistical Sciences, Winter 2022, [evaluations](pdfs/STA304-2022-evals.pdf).
+* Instructor, 'INF312: Worlds Become Data', Winter 2022, [evaluations](pdfs/INF312-2022-evals.pdf).
+* Instructor, 'INF2178: Experimental Design for Data Science', Faculty of Information, Winter 2021, [evaluations](pdfs/INF2178-2021-evals.pdf).
+* Instructor, 'STA304: Surveys, Sampling and Observational Data', Department of Statistical Sciences, Fall 2020, [evaluations](pdfs/STA304-2020-evals.pdf).
+* Instructor, 'INF2178: Experimental Design for Data Science', Faculty of Information, Winter 2020, [evaluations](pdfs/INF2178-2020-evals.pdf).
+
+
+### Australian National University
+
+* Tutor, Macroeconomics 3, Semester 2, 2017, [evaluations](pdfs/2018-02-05-Sem_2_2017-ECON3102_-_Macroeconomics_3.pdf) 
+* Tutor, Microeconomics 3, Semester 1, 2017, [evaluations](pdfs/2018-02-05-Sem_1_2017-ECON3101_-_Microeconomics_3.pdf) 
+* Tutor, Behavioural Economics, Semester 2, 2015, [evaluations](pdfs/2018-02-05-Sem_2_2015-ECON2013_Behavioural_Economics.pdf) 
+* Tutor, Business Economics, Semester 1, 2015, [evaluations](pdfs/2018-02-05-Sem_1_2015-ECON8069_Business_Economics.pdf) 
+* Tutor, Microeconomics 1, Semester 1, 2013, [evaluations](pdfs/2018-02-05-Sem_1_2013-ECON1101_Microeconomics_1.pdf) 
+* Tutor, Foundations of Economic and Financial Models, Semester 2, 2012
+
+### University of Queensland
+
+* Tutor, Microeconomic Policy, Semester 2, 2008
+* Tutor, Microeconomic Theory, Semester 1, 2008
+* Tutor, Introductory Microeconomics, Semester 2, 2007
+* Tutor, Introductory Microeconomics, Semester 1, 2007
+
+
+### Short courses and workshops
+
+* Instructor, Improving Representation of non-representative samples: Multilevel Regression with Post-stratification
+    - University of Toronto, Department of Sociology, Social Science Methods Week 2021, 28 April 2021.
+* Instructor, Gathering data
+    - Wilfrid Laurier University, Laurier Institute for the Study of Public Opinion and Policy, 15 January 2021, https://youtu.be/XzZbEh6aO40.
+* Instructor, Getting started with R
+    - University of Toronto, Undergraduate Global Society for Genetics and Genome Biology, 22 December 2020.
+* Instructor, Gathering Data from Messy Sources
+    - University of Toronto, Independent Summer Statistics Community, 22 May 2020.
+* Instructor, [Getting started with MRP](http://rohanalexander.com/posts/2019-12-04-getting_started_with_mrp/)
+    - Australian National University, 3 December 2019.
+* Instructor, Introduction to Blogdown
+    - Australian National University, RSE, 21 July 2017.
+* Instructor, Introduction to LaTeX
+    - Australian National University, RSE, 13 September 2017.
+    - Australian National University, RSE, 3 May 2016.

@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+<title>Rohan Alexander: Opportunities Provided by Open Data and Reproducibility</title>
+
+<meta property="description" itemprop="description" content="Some thoughts on getting started with open data and reproducibility. A talk delivered at the University of Toronto, Stellar Stats Workshop, 28 May 2021, organised by Gwen Eadie &amp; Josh Speagle."/>
+
+<link rel="canonical" href="https://rohanalexander.com/posts/2021-05-22-baby-steps/"/>
+<link rel="icon" type="image/svg+xml" href="../../images/user-astronaut-solid.svg"/>
+
+<!--  https://schema.org/Article -->
+<meta property="article:published" itemprop="datePublished" content="2021-05-23"/>
+<meta property="article:created" itemprop="dateCreated" content="2021-05-23"/>
+<meta name="article:author" content="Rohan Alexander"/>
+
+<!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+<meta property="og:title" content="Rohan Alexander: Opportunities Provided by Open Data and Reproducibility"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Some thoughts on getting started with open data and reproducibility. A talk delivered at the University of Toronto, Stellar Stats Workshop, 28 May 2021, organised by Gwen Eadie &amp; Josh Speagle."/>
+<meta property="og:url" content="https://rohanalexander.com/posts/2021-05-22-baby-steps/"/>
+<meta property="og:image" content="https://rohanalexander.com/posts/2021-05-22-baby-steps/if_the_shoes_fit.png"/>
+<meta property="og:image:width" content="1280"/>
+<meta property="og:image:height" content="1025"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Rohan Alexander"/>
+
+<!--  https://dev.twitter.com/cards/types/summary -->
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="Rohan Alexander: Opportunities Provided by Open Data and Reproducibility"/>
+<meta property="twitter:description" content="Some thoughts on getting started with open data and reproducibility. A talk delivered at the University of Toronto, Stellar Stats Workshop, 28 May 2021, organised by Gwen Eadie &amp; Josh Speagle."/>
+<meta property="twitter:url" content="https://rohanalexander.com/posts/2021-05-22-baby-steps/"/>
+<meta property="twitter:image" content="https://rohanalexander.com/posts/2021-05-22-baby-steps/if_the_shoes_fit.png"/>
+<meta property="twitter:image:width" content="1280"/>
+<meta property="twitter:image:height" content="1025"/>
+<meta property="twitter:site" content="@RohanAlexander"/>
+
+<!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Reproducibility in demographic research;citation_publication_date=2019;citation_publisher=Talk given at Open Science Workshop;citation_author=Monica Alexander"/>
+  <meta name="citation_reference" content="citation_title=What is ’open data’ and why should we care?;citation_publication_date=2017;citation_author=What is ’open data’ and why should we care?"/>
+  <meta name="citation_reference" content="citation_title=Strengthening research excellence through equity, diversity and inclusion;citation_publication_date=2017;citation_publisher=NSERC Presentation;citation_author=Serge Villemure;citation_author=Anne Webb"/>
+  <meta name="citation_reference" content="citation_title=The disordered cosmos;citation_publication_date=2021;citation_publisher=Bold Type Books;citation_author=Chandra Prescord-Weinstein"/>
+  <meta name="citation_reference" content="citation_title=Diversity wins: How inclusion matters;citation_publication_date=2020;citation_publisher=McKinsey &amp; Company;citation_author=Vivian Hunt;citation_author=Sundiatu Dixon-Fyle;citation_author= Sara Prince;citation_author=Kevin Dolan"/>
+  <meta name="citation_reference" content="citation_title=The last samurai;citation_publication_date=2000;citation_publisher=Talk Miramax Books;citation_author=Helen DeWitt"/>
+  <meta name="citation_reference" content="citation_title=Keeping a lab notebook;citation_publication_date=2015;citation_publisher=NIH;citation_author=Philip Ryan"/>
+  <meta name="citation_reference" content="citation_title=Datasheets for datasets;citation_publication_date=2020;citation_author=Timnit Gebru;citation_author=Jamie Morgenstern;citation_author=Briana Vecchione;citation_author=Jennifer Wortman Vaughan;citation_author=Hanna Wallach;citation_author=Hal Daumé III au2;citation_author=Kate Crawford"/>
+  <meta name="citation_reference" content="citation_title=Addressing &quot;documentation debt&quot; in machine learning research: A retrospective datasheet for BookCorpus;citation_publication_date=2021;citation_author=Jack Bandy;citation_author=Nicholas Vincent"/>
+  <meta name="citation_reference" content="citation_publication_date=2021;citation_author=Thomas William Rosenthal"/>
+  <meta name="citation_reference" content="citation_title=R packages;citation_publication_date=2021;citation_author=Hadley Wickham;citation_author=Jenny Bryan"/>
+  <meta name="citation_reference" content="citation_title=Heapsofpapers;citation_publication_date=2021;citation_author=Rohan Alexander;citation_author=A Mahfouz"/>
+  <meta name="citation_reference" content="citation_title=Getting started with sharing code;citation_publication_date=2021;citation_author=Monica Alexander"/>
+  <meta name="citation_reference" content="citation_title=The impact of APIs in firm performance;citation_publication_date=2017;citation_author=Seth Benzell;citation_author=Guillermo Lagarda;citation_author=Marshall W Van Alstyne"/>
+  <meta name="citation_reference" content="citation_title=DESC DC2 data release note;citation_publication_date=2021;citation_author=Bela Abolfathi;citation_author=Robert Armstrong;citation_author=Humna Awan;citation_author=Yadu N. Babuji;citation_author=Franz Erik Bauer;citation_author=George Beckett;citation_author=Rahul Biswas;citation_author=Joanne R. Bogart;citation_author=Dominique Boutigny;citation_author=Kyle Chard;citation_author=James Chiang;citation_author=Johann Cohen-Tanugi;citation_author=Andrew J. Connolly;citation_author=Scott F. Daniel;citation_author=Seth W. Digel;citation_author=Alex Drlica-Wagner;citation_author=Richard Dubois;citation_author=Eric Gawiser;citation_author=Thomas Glanzman;citation_author=Salman Habib;citation_author=Andrew P. Hearin;citation_author=Katrin Heitmann;citation_author=Fabio Hernandez;citation_author=Renée Hložek;citation_author=Joseph Hollowed;citation_author=Mike Jarvis;citation_author=Saurabh W. Jha;citation_author=J. Bryce Kalmbach;citation_author=Heather M. Kelly;citation_author=Eve Kovacs;citation_author=Danila Korytov;citation_author=K. Simon Krughoff;citation_author=Craig S. Lage;citation_author=François Lanusse;citation_author=Patricia Larsen;citation_author=Nan Li;citation_author=Emily Phillips Longley;citation_author=Robert H. Lupton;citation_author=Rachel Mandelbaum;citation_author=Yao-Yuan Mao;citation_author=Phil Marshall;citation_author=Joshua E. Meyers;citation_author=Ji Won Park;citation_author=Julien Peloton;citation_author=Daniel Perrefort;citation_author=James Perry;citation_author=Stéphane Plaszczynski;citation_author=Adrian Pope;citation_author=Eli S. Rykoff;citation_author=F. Javier Sánchez;citation_author=Samuel J. Schmidt;citation_author=Thomas D. Uram;citation_author=Antonio Villarreal;citation_author=Christopher W. Walter;citation_author=Matthew P. Wiesner;citation_author=W. Michael Wood-Vasey;citation_author=DESC DC2 data release note"/>
+  <meta name="citation_reference" content="citation_title=Python code packaging for scientific software;citation_publication_date=2021;citation_author=Jo Bovy"/>
+  <meta name="citation_reference" content="citation_title=Data challenges as a tool for time-domain astronomy;citation_publication_date=2019;citation_publisher=IOP Publishing;citation_volume=131;citation_doi=10.1088/1538-3873/ab311d;citation_issn=1538-3873;citation_author=Renée Hložek"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+<script type="text/json" id="radix-rmarkdown-metadata">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","preview","output","draft","bibliography","collections","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Opportunities Provided by Open Data and Reproducibility"]},{"type":"character","attributes":{},"value":["Some thoughts on getting started with open data and reproducibility. A talk delivered at the University of Toronto, Stellar Stats Workshop, 28 May 2021, organised by Gwen Eadie & Josh Speagle."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["rohanalexander.com"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]}]},{"type":"character","attributes":{},"value":["2021-05-23"]},{"type":"character","attributes":{},"value":["if_the_shoes_fit.png"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["references.bib"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["citations"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://rohanalexander.com/posts/2021-05-22-baby-steps/"]}]}
+</script>
+<!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["baby-steps_files/anchor-4.2.2/anchor.min.js","baby-steps_files/bowser-1.9.3/bowser.min.js","baby-steps_files/distill-2.2.21/template.v2.js","baby-steps_files/header-attrs-2.8.3/header-attrs.js","baby-steps_files/jquery-1.11.3/jquery.min.js","baby-steps_files/popper-2.6.0/popper.min.js","baby-steps_files/tippy-6.2.7/tippy-bundle.umd.min.js","baby-steps_files/tippy-6.2.7/tippy-light-border.css","baby-steps_files/tippy-6.2.7/tippy.css","baby-steps_files/tippy-6.2.7/tippy.umd.min.js","baby-steps_files/webcomponents-2.0.0/webcomponents.js","if_the_shoes_fit.png","references.bib"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+<meta name="distill:offset" content="../.."/>
+
+<script type="application/javascript">
+
+  window.headroom_prevent_pin = false;
+
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+
+    // initialize headroom for banner
+    var header = $('header').get(0);
+    var headerHeight = header.offsetHeight;
+    var headroom = new Headroom(header, {
+      tolerance: 5,
+      onPin : function() {
+        if (window.headroom_prevent_pin) {
+          window.headroom_prevent_pin = false;
+          headroom.unpin();
+        }
+      }
+    });
+    headroom.init();
+    if(window.location.hash)
+      headroom.unpin();
+    $(header).addClass('headroom--transition');
+
+    // offset scroll location for banner on hash change
+    // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+    window.addEventListener("hashchange", function(event) {
+      window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+    });
+
+    // responsive menu
+    $('.distill-site-header').each(function(i, val) {
+      var topnav = $(this);
+      var toggle = topnav.find('.nav-toggle');
+      toggle.on('click', function() {
+        topnav.toggleClass('responsive');
+      });
+    });
+
+    // nav dropdowns
+    $('.nav-dropbtn').click(function(e) {
+      $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+      $(this).parent().siblings('.nav-dropdown')
+         .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $("body").click(function(e){
+      $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+    });
+    $(".nav-dropdown").click(function(e){
+      e.stopPropagation();
+    });
+  });
+</script>
+
+<style type="text/css">
+
+/* Theme (user-documented overrideables for nav appearance) */
+
+.distill-site-nav {
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #0F2E3D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.distill-site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.distill-site-nav a:hover {
+  color: white;
+}
+
+@media print {
+  .distill-site-nav {
+    display: none;
+  }
+}
+
+.distill-site-header {
+
+}
+
+.distill-site-footer {
+
+}
+
+
+/* Site Header */
+
+.distill-site-header {
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.distill-site-header .nav-left {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header .nav-left {
+    margin-left: 0;
+  }
+}
+
+
+.distill-site-header .nav-right {
+  float: right;
+  margin-right: 8px;
+}
+
+.distill-site-header a,
+.distill-site-header .title {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 10px 14px 10px;
+}
+
+.distill-site-header .title {
+  font-size: 18px;
+  min-width: 150px;
+}
+
+.distill-site-header .logo {
+  padding: 0;
+}
+
+.distill-site-header .logo img {
+  display: none;
+  max-height: 20px;
+  width: auto;
+  margin-bottom: -4px;
+}
+
+.distill-site-header .nav-image img {
+  max-height: 18px;
+  width: auto;
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+  .distill-site-header .logo img {
+    display: inline-block;
+  }
+  .distill-site-header .nav-left {
+    margin-left: 20px;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 20px;
+  }
+  .distill-site-header .title {
+    padding-left: 12px;
+  }
+}
+
+
+.distill-site-header .nav-toggle {
+  display: none;
+}
+
+.nav-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-dropdown .nav-dropbtn {
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 16px 10px;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  z-index: 1;
+  margin-top: 2px;
+  white-space: nowrap;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.nav-dropdown-content hr {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown-active {
+  display: block;
+}
+
+.nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+  color: black;
+  padding: 6px 24px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-content .nav-dropdown-header {
+  display: block;
+  padding: 5px 24px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999999;
+  white-space: nowrap;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+  color: white;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-right .nav-dropdown-content {
+  margin-left: -45%;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+  .distill-site-header a.nav-toggle {
+    float: right;
+    display: block;
+  }
+  .distill-site-header .title {
+    margin-left: 0;
+  }
+  .distill-site-header .nav-right {
+    margin-right: 0;
+  }
+  .distill-site-header {
+    overflow: hidden;
+  }
+  .nav-right .nav-dropdown-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .distill-site-header.responsive {position: relative; min-height: 500px; }
+  .distill-site-header.responsive a.nav-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .distill-site-header.responsive a,
+  .distill-site-header.responsive .nav-dropdown {
+    display: block;
+    text-align: left;
+  }
+  .distill-site-header.responsive .nav-left,
+  .distill-site-header.responsive .nav-right {
+    width: 100%;
+  }
+  .distill-site-header.responsive .nav-dropdown {float: none;}
+  .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+  .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Site Footer */
+
+.distill-site-footer {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 3;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/* Headroom */
+
+d-title {
+  padding-top: 6rem;
+}
+
+@media print {
+  d-title {
+    padding-top: 4rem;
+  }
+}
+
+.headroom {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.headroom--transition {
+  transition: all .4s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
+</style>
+
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet"/>
+<link href="../../site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet"/>
+<script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
+<!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+<style type="text/css">
+
+body {
+  background-color: white;
+}
+
+.pandoc-table {
+  width: 100%;
+}
+
+.pandoc-table>caption {
+  margin-bottom: 10px;
+}
+
+.pandoc-table th:not([align]) {
+  text-align: left;
+}
+
+.pagedtable-footer {
+  font-size: 15px;
+}
+
+d-byline .byline {
+  grid-template-columns: 2fr 2fr;
+}
+
+d-byline .byline h3 {
+  margin-block-start: 1.5em;
+}
+
+d-byline .byline .authors-affiliations h3 {
+  margin-block-start: 0.5em;
+}
+
+.authors-affiliations .orcid-id {
+  width: 16px;
+  height:16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
+
+d-title .dt-tags {
+  margin-top: 1em;
+  grid-column: text;
+}
+
+.dt-tags .dt-tag {
+  text-decoration: none;
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0em 0.4em;
+  margin-right: 0.5em;
+  margin-bottom: 0.4em;
+  font-size: 70%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+d-article table.gt_table td,
+d-article table.gt_table th {
+  border-bottom: none;
+  font-size: 100%;
+}
+
+.html-widget {
+  margin-bottom: 2.0em;
+}
+
+.l-screen-inset {
+  padding-right: 16px;
+}
+
+.l-screen .caption {
+  margin-left: 10px;
+}
+
+.shaded {
+  background: rgb(247, 247, 247);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .html-widget {
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.shaded .shaded-content {
+  background: white;
+}
+
+.text-output {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+d-article {
+  padding-top: 2.5rem;
+  padding-bottom: 30px;
+}
+
+d-appendix {
+  padding-top: 30px;
+}
+
+d-article>p>img {
+  width: 100%;
+}
+
+d-article h2 {
+  margin: 1rem 0 1.5rem 0;
+}
+
+d-article h3 {
+  margin-top: 1.5rem;
+}
+
+d-article iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.0em;
+  width: 100%;
+}
+
+/* Tweak code blocks */
+
+d-article div.sourceCode code,
+d-article pre code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: auto;
+}
+
+d-article div.sourceCode {
+  background-color: white;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 10px;
+  font-size: 12px;
+  border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+d-article pre {
+  font-size: 12px;
+  color: black;
+  background: none;
+  margin-top: 0;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+d-article pre a {
+  border-bottom: none;
+}
+
+d-article pre a:hover {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
+@media(min-width: 768px) {
+
+d-article pre,
+d-article div.sourceCode,
+d-article div.sourceCode pre {
+  overflow: visible !important;
+}
+
+d-article div.sourceCode pre {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+d-article pre {
+  font-size: 14px;
+}
+
+}
+
+figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+/* CSS for d-contents */
+
+.d-contents {
+  grid-column: text;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  padding-left: 0.25em;
+  justify-self: start;
+}
+
+@media(min-width: 1000px) {
+  .d-contents.d-contents-float {
+    height: 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: center;
+    padding-right: 3em;
+    padding-left: 2em;
+  }
+}
+
+.d-contents nav h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.d-contents li {
+  list-style-type: none
+}
+
+.d-contents nav > ul {
+  padding-left: 0;
+}
+
+.d-contents ul {
+  padding-left: 1em
+}
+
+.d-contents nav ul li {
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+}
+
+.d-contents nav a {
+  font-size: 13px;
+  border-bottom: none;
+  text-decoration: none
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.d-contents nav a:hover {
+  text-decoration: underline solid rgba(0, 0, 0, 0.6)
+}
+
+.d-contents nav > ul > li > a {
+  font-weight: 600;
+}
+
+.d-contents nav > ul > li > ul {
+  font-weight: inherit;
+}
+
+.d-contents nav > ul > li > ul > li {
+  margin-top: 0.2em;
+}
+
+
+.d-contents nav ul {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+}
+
+.d-article-with-toc h2:nth-child(2) {
+  margin-top: 0;
+}
+
+
+/* Figure */
+
+.figure {
+  position: relative;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.figure .caption {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+.figure img.external {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.figure .caption a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.figure .caption b,
+.figure .caption strong, {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1.0);
+}
+
+/* Citations */
+
+d-article .citation {
+  color: inherit;
+  cursor: inherit;
+}
+
+div.hanging-indent{
+  margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
+}
+
+
+/* Tweak 1000px media break to show more text */
+
+@media(min-width: 1000px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 16px;
+  }
+
+  .grid {
+    grid-column-gap: 16px;
+  }
+
+  d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+  }
+  figure .caption, .figure .caption, figure figcaption {
+    font-size: 13px;
+  }
+}
+
+@media(min-width: 1180px) {
+  .base-grid,
+  distill-header,
+  d-title,
+  d-abstract,
+  d-article,
+  d-appendix,
+  distill-appendix,
+  d-byline,
+  d-footnote-list,
+  d-citation-list,
+  distill-footer {
+    grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+    grid-column-gap: 32px;
+  }
+
+  .grid {
+    grid-column-gap: 32px;
+  }
+}
+
+
+/* Get the citation styles for the appendix (not auto-injected on render since
+   we do our own rendering of the citation appendix) */
+
+d-appendix .citation-appendix,
+.d-appendix .citation-appendix {
+  font-size: 11px;
+  line-height: 15px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 18px;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.02);
+  padding: 10px 18px;
+  border-radius: 3px;
+  color: rgba(150, 150, 150, 1);
+  overflow: hidden;
+  margin-top: -12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Include appendix styles here so they can be overridden */
+
+d-appendix {
+  contain: layout style;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-top: 60px;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0,0,0,0.5);
+  padding-top: 60px;
+  padding-bottom: 48px;
+}
+
+d-appendix h3 {
+  grid-column: page-start / text-start;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.65);
+}
+
+d-appendix h3 + * {
+  margin-top: 1em;
+}
+
+d-appendix ol {
+  padding: 0 0 0 15px;
+}
+
+@media (min-width: 768px) {
+  d-appendix ol {
+    padding: 0 0 0 30px;
+    margin-left: -30px;
+  }
+}
+
+d-appendix li {
+  margin-bottom: 1em;
+}
+
+d-appendix a {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+d-appendix > * {
+  grid-column: text;
+}
+
+d-appendix > d-footnote-list,
+d-appendix > d-citation-list,
+d-appendix > distill-appendix {
+  grid-column: screen;
+}
+
+/* Include footnote styles here so they can be overridden */
+
+d-footnote-list {
+  contain: layout style;
+}
+
+d-footnote-list > * {
+  grid-column: text;
+}
+
+d-footnote-list a.footnote-backlink {
+  color: rgba(0,0,0,0.3);
+  padding-left: 0.5em;
+}
+
+
+
+/* Anchor.js */
+
+.anchorjs-link {
+  /*transition: all .25s linear; */
+  text-decoration: none;
+  border-bottom: none;
+}
+*:hover > .anchorjs-link {
+  margin-left: -1.125em !important;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Social footer */
+
+.social_footer {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.67);
+}
+
+.disqus-comments {
+  margin-right: 30px;
+}
+
+.disqus-comment-count {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#disqus_thread {
+  margin-top: 30px;
+}
+
+.article-sharing a {
+  border-bottom: none;
+  margin-right: 8px;
+}
+
+.article-sharing a:hover {
+  border-bottom: none;
+}
+
+.sidebar-section.subscribe {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.subscribe p {
+  margin-bottom: 0.5em;
+}
+
+
+.article-footer .subscribe {
+  font-size: 15px;
+  margin-top: 45px;
+}
+
+
+.sidebar-section.custom {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.custom p {
+  margin-bottom: 0.5em;
+}
+
+/* Styles for listing layout (hide title) */
+.layout-listing d-title, .layout-listing .d-title {
+  display: none;
+}
+
+/* Styles for posts lists (not auto-injected) */
+
+
+.posts-with-sidebar {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.posts-list .description h2,
+.posts-list .description p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.posts-list .description h2 {
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.posts-list h2.post-tag {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 12px;
+}
+.posts-list {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.posts-list .post-preview {
+  text-decoration: none;
+  overflow: hidden;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 24px 0;
+}
+
+.post-preview-last {
+  border-bottom: none !important;
+}
+
+.posts-list .posts-list-caption {
+  grid-column: screen;
+  font-weight: 400;
+}
+
+.posts-list .post-preview h2 {
+  margin: 0 0 6px 0;
+  line-height: 1.2em;
+  font-style: normal;
+  font-size: 24px;
+}
+
+.posts-list .post-preview p {
+  margin: 0 0 12px 0;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+
+.posts-list .post-preview .thumbnail {
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+.posts-list .post-preview img {
+  width: 100%;
+  display: block;
+}
+
+.posts-list .metadata {
+  font-size: 12px;
+  line-height: 1.4em;
+  margin-bottom: 18px;
+}
+
+.posts-list .metadata > * {
+  display: inline-block;
+}
+
+.posts-list .metadata .publishedDate {
+  margin-right: 2em;
+}
+
+.posts-list .metadata .dt-authors {
+  display: block;
+  margin-top: 0.3em;
+  margin-right: 2em;
+}
+
+.posts-list .dt-tags {
+  display: block;
+  line-height: 1em;
+}
+
+.posts-list .dt-tags .dt-tag {
+  display: inline-block;
+  color: rgba(0,0,0,0.6);
+  padding: 0.3em 0.4em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
+  font-size: 60%;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.posts-list img {
+  opacity: 1;
+}
+
+.posts-list img[data-src] {
+  opacity: 0;
+}
+
+.posts-more {
+  clear: both;
+}
+
+
+.posts-sidebar {
+  font-size: 16px;
+}
+
+.posts-sidebar h3 {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.categories ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categories li {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0;
+}
+
+.categories li>a {
+  border-bottom: none;
+}
+
+.categories li>a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.categories .active {
+  font-weight: 600;
+}
+
+.categories .category-count {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+@media(min-width: 768px) {
+  .posts-list .post-preview h2 {
+    font-size: 26px;
+  }
+  .posts-list .post-preview .thumbnail {
+    float: right;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .posts-list .post-preview .description {
+    float: left;
+    width: 45%;
+  }
+  .posts-list .post-preview .metadata {
+    float: left;
+    width: 20%;
+    margin-top: 8px;
+  }
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 75%;
+  }
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 20%;
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+
+/* Improve display for browsers without grid (IE/Edge <= 15) */
+
+.downlevel {
+  line-height: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.downlevel .d-title {
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
+}
+
+.downlevel .d-title h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0 0 0.5rem;
+}
+
+.downlevel .d-title p {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.55em;
+  margin-top: 0;
+}
+
+.downlevel .d-byline {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  font-size: 0.8rem;
+  line-height: 1.8em;
+}
+
+.downlevel .section-separator {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.downlevel .d-article {
+  font-size: 1.06rem;
+  line-height: 1.7em;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+
+.downlevel .d-appendix {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  margin-bottom: 0;
+  color: rgba(0,0,0,0.5);
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.downlevel .footnotes ol {
+  padding-left: 13px;
+}
+
+.downlevel .base-grid,
+.downlevel .distill-header,
+.downlevel .d-title,
+.downlevel .d-abstract,
+.downlevel .d-article,
+.downlevel .d-appendix,
+.downlevel .distill-appendix,
+.downlevel .d-byline,
+.downlevel .d-footnote-list,
+.downlevel .d-citation-list,
+.downlevel .distill-footer,
+.downlevel .appendix-bottom,
+.downlevel .posts-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media(min-width: 768px) {
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  max-width: 900px;
+}
+}
+
+.downlevel pre code {
+  display: block;
+  border-left: 2px solid rgba(0, 0, 0, .1);
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+
+.downlevel code, .downlevel pre {
+  color: black;
+  background: none;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+.downlevel .posts-list .post-preview {
+  color: inherit;
+}
+
+
+
+</style>
+
+<script type="application/javascript">
+
+function is_downlevel_browser() {
+  if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                 window.navigator.userAgent)) {
+    return true;
+  } else {
+    return window.load_distill_framework === undefined;
+  }
+}
+
+// show body when load is complete
+function on_load_complete() {
+
+  // add anchors
+  if (window.anchors) {
+    window.anchors.options.placement = 'left';
+    window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+  }
+
+
+  // set body to visible
+  document.body.style.visibility = 'visible';
+
+  // force redraw for leaflet widgets
+  if (window.HTMLWidgets) {
+    var maps = window.HTMLWidgets.findAll(".leaflet");
+    $.each(maps, function(i, el) {
+      var map = this.getMap();
+      map.invalidateSize();
+      map.eachLayer(function(layer) {
+        if (layer instanceof L.TileLayer)
+          layer.redraw();
+      });
+    });
+  }
+
+  // trigger 'shown' so htmlwidgets resize
+  $('d-article').trigger('shown');
+}
+
+function init_distill() {
+
+  init_common();
+
+  // create front matter
+  var front_matter = $('<d-front-matter></d-front-matter>');
+  $('#distill-front-matter').wrap(front_matter);
+
+  // create d-title
+  $('.d-title').changeElementType('d-title');
+
+  // create d-byline
+  var byline = $('<d-byline></d-byline>');
+  $('.d-byline').replaceWith(byline);
+
+  // create d-article
+  var article = $('<d-article></d-article>');
+  $('.d-article').wrap(article).children().unwrap();
+
+  // move posts container into article
+  $('.posts-container').appendTo($('d-article'));
+
+  // create d-appendix
+  $('.d-appendix').changeElementType('d-appendix');
+
+  // flag indicating that we have appendix items
+  var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+  // replace footnotes with <d-footnote>
+  $('.footnote-ref').each(function(i, val) {
+    appendix = true;
+    var href = $(this).attr('href');
+    var id = href.replace('#', '');
+    var fn = $('#' + id);
+    var fn_p = $('#' + id + '>p');
+    fn_p.find('.footnote-back').remove();
+    var text = fn_p.html();
+    var dtfn = $('<d-footnote></d-footnote>');
+    dtfn.html(text);
+    $(this).replaceWith(dtfn);
+  });
+  // remove footnotes
+  $('.footnotes').remove();
+
+  // move refs into #references-listing
+  $('#references-listing').replaceWith($('#refs'));
+
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    var id = $(this).attr('id');
+    $('.d-contents a[href="#' + id + '"]').parent().remove();
+    appendix = true;
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+  });
+
+  // show d-appendix if we have appendix content
+  $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+  // localize layout chunks to just output
+  $('.layout-chunk').each(function(i, val) {
+
+    // capture layout
+    var layout = $(this).attr('data-layout');
+
+    // apply layout to markdown level block elements
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
+    elements.each(function(i, el) {
+      var layout_div = $('<div class="' + layout + '"></div>');
+      if (layout_div.hasClass('shaded')) {
+        var shaded_content = $('<div class="shaded-content"></div>');
+        $(this).wrap(shaded_content);
+        $(this).parent().wrap(layout_div);
+      } else {
+        $(this).wrap(layout_div);
+      }
+    });
+
+
+    // unwrap the layout-chunk div
+    $(this).children().unwrap();
+  });
+
+  // remove code block used to force  highlighting css
+  $('.distill-force-highlighting-css').parent().remove();
+
+  // remove empty line numbers inserted by pandoc when using a
+  // custom syntax highlighting theme
+  $('code.sourceCode a:empty').remove();
+
+  // load distill framework
+  load_distill_framework();
+
+  // wait for window.distillRunlevel == 4 to do post processing
+  function distill_post_process() {
+
+    if (!window.distillRunlevel || window.distillRunlevel < 4)
+      return;
+
+    // hide author/affiliations entirely if we have no authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+    if (!have_authors)
+      $('d-byline').addClass('hidden');
+
+    // article with toc class
+    $('.d-contents').parent().addClass('d-article-with-toc');
+
+    // strip links that point to #
+    $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+    // add orcid ids
+    $('.authors-affiliations').find('.author').each(function(i, el) {
+      var orcid_id = front_matter.authors[i].orcidID;
+      if (orcid_id) {
+        var a = $('<a></a>');
+        a.attr('href', 'https://orcid.org/' + orcid_id);
+        var img = $('<img></img>');
+        img.addClass('orcid-id');
+        img.attr('alt', 'ORCID ID');
+        img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+        a.append(img);
+        $(this).append(a);
+      }
+    });
+
+    // hide elements of author/affiliations grid that have no value
+    function hide_byline_column(caption) {
+      $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+    }
+
+    // affiliations
+    var have_affiliations = false;
+    for (var i = 0; i<front_matter.authors.length; ++i) {
+      var author = front_matter.authors[i];
+      if (author.affiliation !== "&nbsp;") {
+        have_affiliations = true;
+        break;
+      }
+    }
+    if (!have_affiliations)
+      $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+    // published date
+    if (!front_matter.publishedDate)
+      hide_byline_column("Published");
+
+    // document object identifier
+    var doi = $('d-byline').find('h3:contains("DOI")');
+    var doi_p = doi.next().empty();
+    if (!front_matter.doi) {
+      // if we have a citation and valid citationText then link to that
+      if ($('#citation').length > 0 && front_matter.citationText) {
+        doi.html('Citation');
+        $('<a href="#citation"></a>')
+          .text(front_matter.citationText)
+          .appendTo(doi_p);
+      } else {
+        hide_byline_column("DOI");
+      }
+    } else {
+      $('<a></a>')
+         .attr('href', "https://doi.org/" + front_matter.doi)
+         .html(front_matter.doi)
+         .appendTo(doi_p);
+    }
+
+     // change plural form of authors/affiliations
+    if (front_matter.authors.length === 1) {
+      var grid = $('.authors-affiliations');
+      grid.children('h3:contains("Authors")').text('Author');
+      grid.children('h3:contains("Affiliations")').text('Affiliation');
+    }
+
+    // remove d-appendix and d-footnote-list local styles
+    $('d-appendix > style:first-child').remove();
+    $('d-footnote-list > style:first-child').remove();
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      const citeChild = $(this).children()[0]
+      // Do not process if @xyz has been used without escaping and without bibliography activated
+      // https://github.com/rstudio/distill/issues/466
+      if (citeChild === undefined) return true
+
+      if (citeChild.nodeName == "D-FOOTNOTE") {
+        var fn = citeChild
+        $(this).html(fn.shadowRoot.querySelector("sup"))
+        $(this).id = fn.id
+        fn.remove()
+      }
+      var refs = $(this).attr('data-cites').split(" ");
+      var refHtml = refs.map(function(ref) {
+        // Could use CSS.escape too here, we insure backward compatibility in navigator
+        return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+      }).join("\n");
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
+
+    // fix footnotes in tables (#411)
+    // replacing broken distill.pub feature
+    $('table d-footnote').each(function() {
+      // we replace internal showAtNode methode which is triggered when hovering a footnote
+      this.hoverBox.showAtNode = function(node) {
+        // ported from https://github.com/distillpub/template/pull/105/files
+        calcOffset = function(elem) {
+            let x = elem.offsetLeft;
+            let y = elem.offsetTop;
+            // Traverse upwards until an `absolute` element is found or `elem`
+            // becomes null.
+            while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                x += elem.offsetLeft;
+                y += elem.offsetTop;
+            }
+
+            return { left: x, top: y };
+        }
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+        const bbox = node.getBoundingClientRect();
+        const offset = calcOffset(node);
+        this.show([offset.left + bbox.width, offset.top + bbox.height]);
+      }
+    })
+
+    // clear polling timer
+    clearInterval(tid);
+
+    // show body now that everything is ready
+    on_load_complete();
+  }
+
+  var tid = setInterval(distill_post_process, 50);
+  distill_post_process();
+
+}
+
+function init_downlevel() {
+
+  init_common();
+
+   // insert hr after d-title
+  $('.d-title').after($('<hr class="section-separator"/>'));
+
+  // check if we have authors
+  var front_matter = JSON.parse($("#distill-front-matter").html());
+  var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+  // manage byline/border
+  if (!have_authors)
+    $('.d-byline').remove();
+  $('.d-byline').after($('<hr class="section-separator"/>'));
+  $('.d-byline a').remove();
+
+  // remove toc
+  $('.d-contents').remove();
+
+  // move appendix elements
+  $('h1.appendix, h2.appendix').each(function(i, val) {
+    $(this).changeElementType('h3');
+  });
+  $('h3.appendix').each(function(i, val) {
+    $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+  });
+
+
+  // inject headers into references and footnotes
+  var refs_header = $('<h3></h3>');
+  refs_header.text('References');
+  $('#refs').prepend(refs_header);
+
+  var footnotes_header = $('<h3></h3');
+  footnotes_header.text('Footnotes');
+  $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+  // move appendix-bottom entries to the bottom
+  $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+  $('.appendix-bottom').remove();
+
+  // remove appendix if it's empty
+  if ($('.d-appendix').children().length === 0)
+    $('.d-appendix').remove();
+
+  // prepend separator above appendix
+  $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+  // trim code
+  $('pre>code').each(function(i, val) {
+    $(this).html($.trim($(this).html()));
+  });
+
+  // move posts-container right before article
+  $('.posts-container').insertBefore($('.d-article'));
+
+  $('body').addClass('downlevel');
+
+  on_load_complete();
+}
+
+
+function init_common() {
+
+  // jquery plugin to change element types
+  (function($) {
+    $.fn.changeElementType = function(newType) {
+      var attrs = {};
+
+      $.each(this[0].attributes, function(idx, attr) {
+        attrs[attr.nodeName] = attr.nodeValue;
+      });
+
+      this.replaceWith(function() {
+        return $("<" + newType + "/>", attrs).append($(this).contents());
+      });
+    };
+  })(jQuery);
+
+  // prevent underline for linked images
+  $('a > img').parent().css({'border-bottom' : 'none'});
+
+  // mark non-body figures created by knitr chunks as 100% width
+  $('.layout-chunk').each(function(i, val) {
+    var figures = $(this).find('img, .html-widget');
+    // ignore leaflet img layers (#106)
+    figures = figures.filter(':not(img[class*="leaflet"])')
+    if ($(this).attr('data-layout') !== "l-body") {
+      figures.css('width', '100%');
+    } else {
+      figures.css('max-width', '100%');
+      figures.filter("[width]").each(function(i, val) {
+        var fig = $(this);
+        fig.css('width', fig.attr('width') + 'px');
+      });
+
+    }
+  });
+
+  // auto-append index.html to post-preview links in file: protocol
+  // and in rstudio ide preview
+  $('.post-preview').each(function(i, val) {
+    if (window.location.protocol === "file:")
+      $(this).attr('href', $(this).attr('href') + "index.html");
+  });
+
+  // get rid of index.html references in header
+  if (window.location.protocol !== "file:") {
+    $('.distill-site-header a[href]').each(function(i,val) {
+      $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+    });
+  }
+
+  // add class to pandoc style tables
+  $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+  $('.kable-table').children('table').addClass('pandoc-table');
+
+  // add figcaption style to table captions
+  $('caption').parent('table').addClass("figcaption");
+
+  // initialize posts list
+  if (window.init_posts_list)
+    window.init_posts_list();
+
+  // implmement disqus comment link
+  $('.disqus-comment-count').click(function() {
+    window.headroom_prevent_pin = true;
+    $('#disqus_thread').toggleClass('hidden');
+    if (!$('#disqus_thread').hasClass('hidden')) {
+      var offset = $(this).offset();
+      $(window).resize();
+      $('html, body').animate({
+        scrollTop: offset.top - 35
+      });
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (is_downlevel_browser())
+    init_downlevel();
+  else
+    window.addEventListener('WebComponentsReady', init_distill);
+});
+
+</script>
+
+<!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.8.3/header-attrs.js"></script>
+  <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="../../site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+.nav-dropdown-content {
+  color: #F0A202;
+  background-color: #14213d;
+}
+
+.nav-dropdown-content a:hover {
+  background-color: #14213d;
+}
+
+.nav-dropdown-content a{
+  color: #F0A202;
+}
+
+.nav-dropdown .nav-dropbtn {
+  color: #F0A202;
+}
+
+.distill-site-nav {
+  color: #F0A202;
+  font-weight: bold;
+  background-color: #14213d;
+}
+
+.distill-site-nav a:hover {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  color: #283044;
+}
+
+h2 {
+  color: #283044;
+}
+
+d-article h2 {
+	border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Use specific font in the body of the text */
+html, body, p {
+  
+  font-family: 'Raleway', sans-serif;
+
+  
+}
+</style>
+<!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Opportunities Provided by Open Data and Reproducibility","description":"Some thoughts on getting started with open data and reproducibility. A talk delivered at the University of Toronto, Stellar Stats Workshop, 28 May 2021, organised by Gwen Eadie & Josh Speagle.","authors":[{"author":"Rohan Alexander","authorURL":{"rohanalexander.com":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-05-23T00:00:00.000-04:00","citationText":"Alexander, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="../../index.html" class="title">Rohan Alexander</a>
+</div>
+<div class="nav-right">
+<a href="../../index.html">Home</a>
+<a href="../../teaching.html">Teaching</a>
+<a href="../../toronto_data_workshop.html">Toronto Data Workshop</a>
+<a href="../../blog.html">Blog</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Other
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="../../bookshelf.html">Bookshelf</a>
+<a href="../../reproducibility.html">Toronto Workshop on Reproducibility</a>
+</div>
+</div>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Opportunities Provided by Open Data and Reproducibility</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>Some thoughts on getting started with open data and reproducibility. A talk delivered at the University of Toronto, Stellar Stats Workshop, 28 May 2021, organised by Gwen Eadie &amp; Josh Speagle.</p></p>
+</div>
+
+<div class="d-byline">
+  Rohan Alexander true 
+  
+<br/>2021-05-23
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#three-benefits">Three benefits</a>
+<ul>
+<li><a href="#improved-diversity">Improved diversity</a></li>
+<li><a href="#improving-your-own-future-life">Improving your own (future) life</a></li>
+<li><a href="#building-on-ramps">Building on-ramps</a></li>
+</ul></li>
+<li><a href="#three-baby-steps">Three baby steps</a>
+<ul>
+<li><a href="#buy-a-bunch-of-notebooks">Buy a bunch of notebooks</a></li>
+<li><a href="#write-a-datasheet">Write a datasheet</a></li>
+<li><a href="#make-a-software-package.">Make a software package.</a></li>
+</ul></li>
+<li><a href="#concluding-remarks">Concluding remarks</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</nav>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>Hi, my name is Rohan Alexander. Thank you very much to Gwen and Josh for the opportunity to speak. I’m a baby professor at the University of Toronto, in the Faculty of Information and the Department of Statistical Sciences. Today I would like to talk about taking some baby steps toward open data and reproducibility. And in particular the opportunities provided by open data and reproducibility across applied statistics and astronomy.</p>
+<p>I’d like to talk about three benefits of openness and reproducibility:</p>
+<ol type="1">
+<li>improved diversity broadly;</li>
+<li>improving your own (future) life; and</li>
+<li>building on-ramps for your collaborators.</li>
+</ol>
+<p>And then three baby steps that you could get started with this afternoon:</p>
+<ol type="1">
+<li>buy a bunch of notebooks;</li>
+<li>write a datasheet; and</li>
+<li>make a software package.</li>
+</ol>
+<h2 id="three-benefits">Three benefits</h2>
+<p>By way of background, <span class="citation" data-cites="monicasrostockreprotalk"><a href="#ref-monicasrostockreprotalk" role="doc-biblioref">M. Alexander</a> (<a href="#ref-monicasrostockreprotalk" role="doc-biblioref">2019</a>)</span> says ‘research is reproducible if it can be reproduced exactly, given all the materials used in the study.’ She goes on:</p>
+<blockquote>
+<p>Reproducibility is not just publishing your analysis code. The entire workflow of a research project––from formulating hypotheses to dissemination of your results––has decisions and steps that ideally should be reproducible.</p>
+</blockquote>
+<p><span class="citation" data-cites="opendatainstitute"><a href="#ref-opendatainstitute" role="doc-biblioref">Open Data Institute</a> (<a href="#ref-opendatainstitute" role="doc-biblioref">2017</a>)</span> defines open data as ‘data that’s available to everyone to access, use and share.’ Open data enables reproducibility and is the bedrock of progress.</p>
+<h3 id="improved-diversity">Improved diversity</h3>
+<p>The first benefit that I see is improved diversity, broadly, in our fields. By making our work accessible to more people, we help to to make education and research resources more equitable. In Canadian STEM fields diversity at an undergraduate level is not great, but it’s also not too bad—we reflect broader Canadian society to some extent—but at each successive level we significantly worsen <span class="citation" data-cites="villemurewebb">(<a href="#ref-villemurewebb" role="doc-biblioref">Villemure and Webb 2017</a>)</span>. In my own Department of Statistical Sciences, University Professor Nancy Reid was the only tenured research-track woman in the department for decades. And in astronomy, speaking more broadly, <span class="citation" data-cites="prescordweinstein"><a href="#ref-prescordweinstein" role="doc-biblioref">Prescord-Weinstein</a> (<a href="#ref-prescordweinstein" role="doc-biblioref">2021, 132</a>)</span> says ‘I’ve never met a Black woman professor in the field of theoretical cosmology because I am the first—not just the first professor, but also the first Black woman cosmology theory PhD’<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Improving diversity is important because diverse teams are associated with higher performance <span class="citation" data-cites="mckinsey">(<a href="#ref-mckinsey" role="doc-biblioref">Hunt et al. 2020</a>)</span>. That’s just a correlation, but thinking about my own experiences, I do think that diversity in my own team improved my productivity. For instance, I’ve found that students with different experiences push back and criticize me about things that I haven’t considered. Improving those aspects makes the work better.</p>
+<p>As an aside, I also think that as Canada’s best university, and a public one at that, we have a duty to be more reflective of Canada. There’s a quote from one of my favourite books that I thought this audience would like, because it features an astronomer is talking to a child, trying to convince him that humanities are important, and the astronomer says:</p>
+<blockquote>
+<p>Any science is expensive and astronomy is more expensive than most…. If you need hundreds of millions of pounds sooner or later you are going to have to talk to people who don’t understand what you’re doing and don’t want to understand because they hated science at school.</p>
+<p><span class="citation" data-cites="dewitt"><a href="#ref-dewitt" role="doc-biblioref">DeWitt</a> (<a href="#ref-dewitt" role="doc-biblioref">2000, 396</a>)</span></p>
+</blockquote>
+<p>It’s entirely correct that these people are in charge because that’s who we voted for. But it would be nice if they didn’t hate astronomy or statistics when they take it at university and possibly part of that is reflecting other experiences than just our own.</p>
+<h3 id="improving-your-own-future-life">Improving your own (future) life</h3>
+<p>The second benefit is that ‘future-you’ will be helped. I think that most of us who write code to analyse data for a living have had the feeling of coming back to a project after six months and a lot of the time it’s literally like having to start a new project. The variables make no sense, and the code is unintelligible. The main question for me is always ‘why did I do that?’ And then I spend the afternoon re-coding and almost always end up back where I was.</p>
+<p>If we’re spending eight hours a day writing code to analyse data, then almost anything that adds even one per cent to our productivity is worthwhile, let alone something that saves an afternoon. And that’s particularly the case with open data and reproducibility, because these benefits tend to compound over time and accrue not just to you but other researchers. Talking about knowledge that only you have, doesn’t make you knowledgeable, it makes you a crank, and that includes knowledge that only ‘past-you’ has.</p>
+<h3 id="building-on-ramps">Building on-ramps</h3>
+<p>The third benefit is that adopting open data and reproducibility can allow us to build better on-ramps for our collaborators. I love applied statistics, and I can’t quite believe that I get paid to do this job, and I really want more people to be able to work with me on my projects. These days I get to work with a lot of students, and I think the best way for me to make it easier for them to get up to speed is to adopt open data and reproducibility principles.</p>
+<p>I don’t think of myself as a scary or intimidating person, but I’m regularly told that in anonymous surveys. New, especially undergraduate, collaborators may be hesitant to ask questions because they feel awkward, or they feel they should know the answer or that they worry I’ll think they’re dumb. Some thoughts that may run through their head when they watch me talk through some data analysis: “Why did he remove the 99s?” “Maybe everyone does that?” “Can I just look this up after he finishes talking?” “Is he ever going to finish talking?” “Oh no, now I missed it, what is he saying now?” Open data and reproducibility enable them to not be reliant on me and I hope makes it easier for my collaborators to work with me.</p>
+<h2 id="three-baby-steps">Three baby steps</h2>
+<p>Right, so you’re convinced! You want these great benefits! How can you go about getting them? I’m not asking for anything big from you, and I’m not asking you to advocate, or even change much of anything that you do. (Indeed, if you’re faculty then I’m just asking you to spend some research funds and hire some undergrads!<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>)</p>
+<h3 id="buy-a-bunch-of-notebooks">Buy a bunch of notebooks</h3>
+<p>The first is to buy a notebook. (If you’re faculty, then go and buy a bunch for your team.) And then just write one dot point each time you write some code chunk. Let’s say you’re cleaning some text data, and you want to change all the instances of ‘Rohan’ to ‘Monica.’ Just before you write the code that does that, or perhaps just after, write a simple dot point in that fancy notebook that you bought that explains what you did and why. That’s it. (Don’t worry too much about what you write initially – you’ll get better at it naturally over time.) At the end of the day, you’ll magically have a plain-English list of everything that was done to the dataset. That can easily be added to an appendix or added as comments and documentation alongside the code. Newton and Da Vinci kept notebooks! And if that doesn’t convince you (and it shouldn’t, see: selection bias) the US NIH describes notebooks in science as ‘legal documents’ that support claims to patents, defend against allegations of fraud, and act as your scientific legacy <span class="citation" data-cites="ryan">(<a href="#ref-ryan" role="doc-biblioref">Ryan 2015</a>)</span>.</p>
+<h3 id="write-a-datasheet">Write a datasheet</h3>
+<p>The second thing is writing a datasheet for your dataset. I had a quick look at some of the astronomy data repos and there’s some amazing things around, NASA came up immediately of course, but also a whole bunch associated with folks speaking at this workshop! I’ve never used astronomical datasets, but when I use political or economic datasets of a similar nature, I sometimes find that because I didn’t collect, clean, or prepare the dataset myself, it can be difficult to trust it. This is where datasheets come in <span class="citation" data-cites="gebru2020datasheets">(<a href="#ref-gebru2020datasheets" role="doc-biblioref">Gebru et al. 2020</a>)</span>. Datasheets are basically nutrition labels for datasets. It’s really important to understand what you’re feeding your model, but plenty of researchers don’t have any idea. For instance, recently researchers went back and wrote a datasheet for one of the most popular datasets in computer science, and they found that around 30 per cent of the data were duplicated <span class="citation" data-cites="bandy2021addressing">(<a href="#ref-bandy2021addressing" role="doc-biblioref">Bandy and Vincent 2021</a>)</span>!</p>
+<p>Instead of telling you how unhealthy various foods are, a datasheet tells you things like:</p>
+<ul>
+<li>‘Who created the dataset and on behalf of which entity?’</li>
+<li>‘Who funded the creation of the dataset?’</li>
+<li>‘Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set?’</li>
+<li>‘Is any information missing from individual instances?’</li>
+</ul>
+<p>I’ve integrated datasheets into my teaching and an example of one that a student wrote earlier in Winter 2021 is <span class="citation" data-cites="rosenthal"><a href="#ref-rosenthal" role="doc-biblioref">Rosenthal</a> (<a href="#ref-rosenthal" role="doc-biblioref">2021</a>)</span>. I’m not saying that this isn’t helpful for the student who made it—I <em>hope</em> it was—but it’s especially helpful for me when I think about how best to use the dataset that he created.</p>
+<p>The speaker after me, <a href="https://www.dunlap.utoronto.ca/~hlozek/">Renée Hlozek</a>, has a bunch of papers documenting datasets, for instance <span class="citation" data-cites="lsstdarkenergysciencecollaboration2021desc"><a href="#ref-lsstdarkenergysciencecollaboration2021desc" role="doc-biblioref">LSST Dark Energy Science Collaboration et al.</a> (<a href="#ref-lsstdarkenergysciencecollaboration2021desc" role="doc-biblioref">2021</a>)</span>, and another about data challenges <span class="citation" data-cites="Hlo_ek_2019">(<a href="#ref-Hlo_ek_2019" role="doc-biblioref">Hložek 2019</a>)</span> that I think would be interesting to combine with the idea of backfilling datasheets.</p>
+<h3 id="make-a-software-package.">Make a software package.</h3>
+<p>The third and final thing is to build out internal APIs for your code and then make them external. Now this may sound intimidating, but you can do it! (Or if you’re faculty, again, it’s something that you can have an undergraduate do.) My PhD is in economic history and basically what that means is that I have a PhD in data gathering and cleaning. To my shame, I have literally written code that ‘downloads a PDF from a URL, saves it to my computer, pauses, and goes and gets another PDF from a very similar URL,’ literally hundreds of times. And of course, no one should write the same code hundreds of times.</p>
+<p>Last summer I found myself asking a student to go and write code to do that same task and I finally decided that enough was enough. Instead, I had them put together an R package. Now this was literally only the work of a week for them. So instead of everyone in the lab writing code each time they needed to download a PDF, they could just call this R package and use that instead: we wrote an internal API. I decided that I wanted to make it external facing and there’s now an R package—‘heapsofpapers’—that anyone can use <span class="citation" data-cites="heapsofpapers">(<a href="#ref-heapsofpapers" role="doc-biblioref">R. Alexander and Mahfouz 2021</a>)</span>.</p>
+<p>If you want to do this and you use R then just follow ‘Chapter 2 - The Whole Game’ from <span class="citation" data-cites="rpackages"><a href="#ref-rpackages" role="doc-biblioref">Wickham and Bryan</a> (<a href="#ref-rpackages" role="doc-biblioref">2021</a>)</span>. Within a few hours you can have a workable solution and within a month or two you can have a great external API.</p>
+<p>And for those of you who are more Python focused, the speaker before me, <a href="http://astro.utoronto.ca/~bovy/">Jo Bovy</a>, has all these great Python packages on his <a href="https://github.com/jobovy">GitHub</a>, including a whole course on writing Python packages <span class="citation" data-cites="bovypython">(<a href="#ref-bovypython" role="doc-biblioref">Bovy 2021</a>)</span>.</p>
+<p>Making internal APIs external is one reason that Amazon is worth a trillion dollars <span class="citation" data-cites="benzell2017impact">(<a href="#ref-benzell2017impact" role="doc-biblioref">Benzell, Lagarda, and Van Alstyne 2017</a>)</span>, and while I can’t promise that it’ll make you a millionaire, I can promise that you’ll get a paper out of it, and more importantly, help your field.</p>
+<h2 id="concluding-remarks">Concluding remarks</h2>
+<p>I think that open data and reproducibility can be intimidating. I have a two-year-old and I imagine that when he first started to walk he was pretty intimidated also. But he did take his first steps and now he runs around the whole day. And I assure you that it’s the same for open data and reproducibility.</p>
+<p>I’m looking forward to diving further into the work of the other speakers at this workshop, and thank Gwen and Josh for bringing these two communities together, and for letting me speak today.</p>
+<h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
+<p>Thank you very much to Monica for reading a draft of this. If you want something to watch after reading this then I recommend <span class="citation" data-cites="monicatdrtalk"><a href="#ref-monicatdrtalk" role="doc-biblioref">M. Alexander</a> (<a href="#ref-monicatdrtalk" role="doc-biblioref">2021</a>)</span></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-monicasrostockreprotalk" class="csl-entry" role="doc-biblioentry">
+Alexander, Monica. 2019. <em>Reproducibility in Demographic Research</em>. Max Planck Institute for Demographic Research: Talk given at Open Science Workshop. <a href="https://www.monicaalexander.com/posts/2019-10-20-reproducibility/">https://www.monicaalexander.com/posts/2019-10-20-reproducibility/</a>.
+</div>
+<div id="ref-monicatdrtalk" class="csl-entry" role="doc-biblioentry">
+———. 2021. <em>Getting Started with Sharing Code</em>. <a href="https://youtu.be/yvM2C6aZ94k">https://youtu.be/yvM2C6aZ94k</a>.
+</div>
+<div id="ref-heapsofpapers" class="csl-entry" role="doc-biblioentry">
+Alexander, Rohan, and A Mahfouz. 2021. <span>“Heapsofpapers.”</span> <a href="https://rohanalexander.github.io/heapsofpapers/">https://rohanalexander.github.io/heapsofpapers/</a>.
+</div>
+<div id="ref-bandy2021addressing" class="csl-entry" role="doc-biblioentry">
+Bandy, Jack, and Nicholas Vincent. 2021. <span>“Addressing "Documentation Debt" in Machine Learning Research: A Retrospective Datasheet for BookCorpus.”</span> <a href="http://arxiv.org/abs/2105.05241">http://arxiv.org/abs/2105.05241</a>.
+</div>
+<div id="ref-benzell2017impact" class="csl-entry" role="doc-biblioentry">
+Benzell, Seth, Guillermo Lagarda, and Marshall W Van Alstyne. 2017. <span>“The Impact of APIs in Firm Performance.”</span> <em>Boston University Questrom School of Business Research Paper</em>, no. 2843326.
+</div>
+<div id="ref-bovypython" class="csl-entry" role="doc-biblioentry">
+Bovy, Jo. 2021. <em>Python Code Packaging for Scientific Software</em>. <a href="https://pythonpackaging.info">https://pythonpackaging.info</a>.
+</div>
+<div id="ref-dewitt" class="csl-entry" role="doc-biblioentry">
+DeWitt, Helen. 2000. <em>The Last Samurai</em>. Talk Miramax Books.
+</div>
+<div id="ref-gebru2020datasheets" class="csl-entry" role="doc-biblioentry">
+Gebru, Timnit, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé III au2, and Kate Crawford. 2020. <span>“Datasheets for Datasets.”</span> <a href="http://arxiv.org/abs/1803.09010">http://arxiv.org/abs/1803.09010</a>.
+</div>
+<div id="ref-Hlo_ek_2019" class="csl-entry" role="doc-biblioentry">
+Hložek, Renée. 2019. <span>“Data Challenges as a Tool for Time-Domain Astronomy.”</span> <em>Publications of the Astronomical Society of the Pacific</em> 131 (1005): 118001. <a href="https://doi.org/10.1088/1538-3873/ab311d">https://doi.org/10.1088/1538-3873/ab311d</a>.
+</div>
+<div id="ref-mckinsey" class="csl-entry" role="doc-biblioentry">
+Hunt, Vivian, Sundiatu Dixon-Fyle, Sara Prince, and Kevin Dolan. 2020. <em>Diversity Wins: How Inclusion Matters</em>. McKinsey &amp; Company. <a href="https://www.mckinsey.com/featured-insights/diversity-and-inclusion/diversity-wins-how-inclusion-matters">https://www.mckinsey.com/featured-insights/diversity-and-inclusion/diversity-wins-how-inclusion-matters</a>.
+</div>
+<div id="ref-lsstdarkenergysciencecollaboration2021desc" class="csl-entry" role="doc-biblioentry">
+LSST Dark Energy Science Collaboration, Bela Abolfathi, Robert Armstrong, Humna Awan, Yadu N. Babuji, Franz Erik Bauer, George Beckett, et al. 2021. <span>“DESC Dc2 Data Release Note.”</span> <a href="http://arxiv.org/abs/2101.04855">http://arxiv.org/abs/2101.04855</a>.
+</div>
+<div id="ref-opendatainstitute" class="csl-entry" role="doc-biblioentry">
+Open Data Institute. 2017. <em>What Is ’Open Data’ and Why Should We Care?</em> <a href="https://theodi.org/article/what-is-open-data-and-why-should-we-care/">https://theodi.org/article/what-is-open-data-and-why-should-we-care/</a>.
+</div>
+<div id="ref-prescordweinstein" class="csl-entry" role="doc-biblioentry">
+Prescord-Weinstein, Chandra. 2021. <em>The Disordered Cosmos</em>. Bold Type Books.
+</div>
+<div id="ref-rosenthal" class="csl-entry" role="doc-biblioentry">
+Rosenthal, Thomas William. 2021. <a href="https://github.com/mrpotatocode/COFFEE_COFFEE_COFFEE/blob/main/journal/Week8/DataSheet-0.1.md">https://github.com/mrpotatocode/COFFEE_COFFEE_COFFEE/blob/main/journal/Week8/DataSheet-0.1.md</a>.
+</div>
+<div id="ref-ryan" class="csl-entry" role="doc-biblioentry">
+Ryan, Philip. 2015. <em>Keeping a Lab Notebook</em>. NIH. <a href="https://youtu.be/-MAIuaOL64I">https://youtu.be/-MAIuaOL64I</a>.
+</div>
+<div id="ref-villemurewebb" class="csl-entry" role="doc-biblioentry">
+Villemure, Serge, and Anne Webb. 2017. <em>Strengthening Research Excellence Through Equity, Diversity and Inclusion</em>. NSERC Presentation. <a href="https://www.nserc-crsng.gc.ca/_doc/EDI/EDIpresentation_EN.pdf">https://www.nserc-crsng.gc.ca/_doc/EDI/EDIpresentation_EN.pdf</a>.
+</div>
+<div id="ref-rpackages" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, and Jenny Bryan. 2021. <em>R Packages</em>. <a href="https://r-pkgs.org/">https://r-pkgs.org/</a>.
+</div>
+</div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Thanks very much to Vianey Leos Barajas for gifting me this book.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>Statistical Sciences has something in the order of 4,000 undergrads, which is quite a lot, but the great thing about it is that the top 5 per cent are just incredibly strong. You could hire a few of them for literally $25 an hour, and then just get them to do these three things! Possibly that hiring would even add to the diversity of your team.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+  <h3 id="references">References</h3>
+  <div id="references-listing"></div>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

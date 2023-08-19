@@ -1,0 +1,10 @@
+---
+title: "Book"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+My book *[Telling Stories With Data](https://www.tellingstorieswithdata.com/)* was accepted for publication by CRC Press in May 2021. It is currently under development, and I'd appreciate any feedback.

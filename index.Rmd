@@ -1,0 +1,43 @@
+---
+title: "Rohan Alexander"
+image: "images/new_headshot.png"
+links:
+  - label: Twitter
+    url: "https://twitter.com/RohanAlexander"
+  - label: GitHub
+    url: "https://github.com/RohanAlexander"
+  - label: CV
+    url: "pdfs/cv-academic-Rohan_Alexander.pdf"
+  - label: Email
+    url: "mailto:rohan.alexander@utoronto.ca"
+site: distill::distill_website
+output:
+  postcards::trestles
+---
+
+I am an assistant professor at the University of Toronto, jointly appointed in the [Faculty of Information](https://ischool.utoronto.ca/profile/rohan-alexander/) and the [Department of Statistical Sciences](https://www.statistics.utoronto.ca/people/directories/all-faculty/rohan-alexander). I am also the assistant director of [CANSSI Ontario](https://canssiontario.utoronto.ca), a senior fellow at [Massey College](https://www.masseycollege.ca), a faculty affiliate at the [Schwartz Reisman Institute for Technology and Society](https://sr-institute.utoronto.ca/), and a co-lead of the [DSI](https://datasciences.utoronto.ca) Thematic Program in Reproducibility.
+
+I hold a PhD in Economics from the Australian National University where I focused on economic history and was supervised by [John Tang](https://sites.google.com/view/john-tang/home) (chair), [Martine Mariotti](https://researchers.anu.edu.au/researchers/mariotti-m), [Tim Hatton](https://researchers.anu.edu.au/researchers/hatton-tj), and [Zach Ward](https://sites.google.com/site/zachaward/).
+
+```{r, out.width= "33%", echo = FALSE, fig.cap = '<a href="https://tellingstorieswithdata.com">Telling Stories with Data</a>'}
+knitr::include_graphics(c("images/tellingstorieswithdatapainting.png"))
+```
+
+My book on foundational data skills, tentatively titled *[Telling Stories With Data](https://www.tellingstorieswithdata.com/)*, was accepted for publication by CRC Press in May 2021. And I am co-editor (alongside [Lauren Kennedy](https://jazzystats.com/about/) and [Andrew Gelman](http://www.stat.columbia.edu/~gelman/)) of a book tentatively titled *Multilevel Regression and Poststratification: A Practical Guide and New Developments*, which was accepted for publication by Cambridge University Press in July 2021.
+
+My research investigates how we can develop workflows that improve the trustworthiness of data science. I am particularly interested in the role of testing in data science.
+
+Students in my [research group](https://rohanalexander.com/group.html) develop skills not only in using statistical methods in reproducible ways across various disciplines, but also appreciate their limitations, and think deeply about the broader context of their work. Some recent papers include: ['Reproducibility of COVID-19 pre-prints'](https://arxiv.org/abs/2107.10724), ['heapsofpapers'](https://rohanalexander.github.io/heapsofpapers/), ['Detecting Hate Speech with GPT-3'](https://arxiv.org/abs/2103.12407), and ['On consistency scores in text data with an implementation in R'](https://arxiv.org/abs/2101.05225).
+
+I enjoy [teaching](https://rohanalexander.com/teaching.html) and aim to help students from a wide range of backgrounds learn how to use data to tell convincing stories. In the Faculty of Information, I have taught ['Experimental Design'](https://rohanalexander.com/inf2178.html) and lead reading courses in ['Ethics and Data Science'](https://rohanalexander.com/reading_course-ethics.html), 'Information Management in Interdisciplinary Research' and 'Reproducible Data Science'. In Statistical Sciences I have taught ['Surveys, Sampling, and Observational Data'](https://rohanalexander.com/sta304.html) and lead a reading course in ['Natural Language Processing'](https://rohanalexander.com/reading_course-nlp.html). I am a [RStudio Certified Tidyverse Trainer](https://education.rstudio.com/trainers) and an associate editor of the *Journal of Statistics and Data Science Education*.
+
+I co-organize the weekly [Toronto Data Workshop](https://rohanalexander.com/toronto_data_workshop.html). All welcome! Sign up [here](https://forms.gle/sXbEixoa1iJR4Q7A8).
+
+<!-- I am organizing a conference on reproducibility in applied statistics that will be held via Zoom on Thursday and Friday 25-26 February 2021. You can learn more [here](https://rohanalexander.com/reproducibility.html).  -->
+
+<!-- With [Lauren Kennedy](https://jazzystats.com/) at Monash University, I co-organize a weekly MRP Reading Group. Please [get in touch](mailto:rohan.alexander@utoronto.ca) if you'd like to attend. -->
+
+<!-- Based on my academic research I run a political poll in Australia: [Petit Poll](https://petitpoll.com). This combines non-representative polling data that we gather ourselves with a hierarchical Bayesian model to cheaply deliver meaningful Australian political polling. -->
+
+I am married to [Monica Alexander](https://www.monicaalexander.com), and we have two young children. I probably spend too much money on books, and certainly too much time at libraries (in a pre-COVID world). You can see some of the books that I recommend [here](https://rohanalexander.com/bookshelf.html). If you have any book recommendations of your own, then I'd love to hear them.
+

@@ -1,0 +1,82 @@
+---
+title: "Academic"
+---
+
+
+
+# Peer-reviewed papers
+
+* Annie Collins and Rohan Alexander, 2022, 'Reproducibility of COVID-19 pre-prints', *Scientometrics*, (accepted), https://arxiv.org/abs/2107.10724.
+* Rohan Alexander and Zach Ward, 2018, '[Age at Arrival and Assimilation During the Age of Mass Migration](https://www.cambridge.org/core/journals/journal-of-economic-history/article/age-at-arrival-and-assimilation-during-the-age-of-mass-migration/85FDB674232C30BDD889711D343F22FE)', *The Journal of Economic History*, 78(3), 904-937. [Working paper version](pdfs/2018_02_21-Age_at_arrival.pdf).
+
+
+
+# Pre-prints
+
+* Rohan Alexander and [Monica Alexander](monicaalexander.com), 2021, 'The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)', *arXiv*, 17 November, https://arxiv.org/abs/2111.09299.
+* Ke-Li Chiu and Rohan Alexander, 2021, 'Detecting Hate Speech with GPT-3', *arXiv*, 23 March [4 November], https://arxiv.org/abs/2103.12407. *Under review at EPJ Data Science.*
+* Rohan Alexander, Samantha-Jo Caetano, Haoluan Chen, Michael Chong, Annie Collins, Shirley Deng, Isaac Ehrlich, Paul Hodgetts, Yena Joo, Marija Pejcinovska, Mariam Walaa, and Matthew Wankiewicz, 2021, 'An Introduction to DoSStoolkit', *arXiv*, 19 May, https://arxiv.org/abs/2105.09347.
+* Ke-Li Chiu and Rohan Alexander, 2021, 'On consistency scores in text data with an implementation in R', *arXiv*, 13 January, https://arxiv.org/abs/2101.05225.
+* Paul A. Hodgetts and Rohan Alexander, 2020, 'cesR: An R package for the Canadian Election Study', *SocArXiv*, 3 September, https://osf.io/preprints/socarxiv/a29h8/.
+
+
+# Software
+
+```{r, out.width= "33%", echo = FALSE}
+knitr::include_graphics(c("images/AustralianPoliticians.png", "images/cesR_hex.png", "images/heapsofpapers_hex.png")) 
+```
+
+* Rohan Alexander and Paul A. Hodgetts, 2021, `AustralianPoliticians`, https://rohanalexander.github.io/AustralianPoliticians/. This R package is a series of functions that load datasets of biographical and political information about Australian federal politicians between 1901 and 2021. The datasets are up-to-date as of 30 November 2021.
+* Paul A. Hodgetts and Rohan Alexander, 2021, `cesR`, https://hodgettsp.github.io/cesR/. This R package provides access to the Canadian Election Study Datasets.
+* Rohan Alexander and A Mahfouz, 2021, `heapsofpapers`, https://rohanalexander.github.io/heapsofpapers/. This R package makes it easy to respectfully download heaps of papers (and CSVs, and websites, and similar). It is essentially a wrapper around a for loop and `utils::download.file()`, but there are a bunch of small things that make things easier compared with writing that out each time. For instance, the package automatically slows down your requests, lets you know where it is up to, and adjusts for papers that you’ve already downloaded.
+
+
+
+
+
+
+
+# Presentations
+
+### Upcoming
+
+- 17 December 2021, University of Toronto Statistics and MachIne LEarning (SMILE) Journal Club.
+- 16 December 2021, Young Irish Statisticians.
+
+
+
+### Past
+
+* A super opinionated talk about data science, APIs, and grad school applications   
+    18 November 2021, University of Toronto, Undergraduate Statistical Sciences Union Workshop. https://youtu.be/P1yvnq2Rojk
+* Remarks at Trinity College   
+    19 October 2021, University of Toronto, Trinity College High Table.
+* Introduction to Andrew Gelman   
+    17 September 2021, University of Toronto, Data Sciences Institute launch.
+* Introduction to R   
+    22 December 2020, University of Toronto, Global Society for Genetics and Genome Biology.
+* Turning Our World Into Data   
+    7 July 2021, Harvard Biostatistics Data Science in Action Summer Camp.  
+* Forecasting Parliamentary Elections  
+    10 December 2019, Monash University, Department of Econometrics & Business Statistics, Melbourne.  
+    9 December 2019, Australian Society for Quantitative Political Science Conference, Melbourne.  
+    2 December 2019, Australian National University, Cake for Comments, Canberra.  
+    20 November 2019, POP Politics Workshop, Canberra.  
+    17 October 2018, University of Toronto, Political Behaviour Group, Toronto.  
+* A Word-Count Based Classifier of Politicians in the Australian Federal Parliament (1901--2018)  
+    4 September 2019, European Consortium for Political Research, General Conference, Wroclaw.  
+    22 June 2019, European Political Science Association, Annual Conference, Belfast.  
+    18 June 2019, Quantitative Text Analysis Workshop, Dublin.
+*  The Effect of Elections and Prime Ministers on Discussion in the Australian Federal Parliament (1901—2018)  
+    11 January 2019, Political Methodology Specialist Group, Annual Conference, Warwick.  
+    11 December 2018, Max Planck Institute for Demographic Research, Rostock.  
+    22 November 2018, University of Toronto, Political Behaviour Group, Toronto.  
+    25 October 2018, Australian National University, Research School of Economics, Canberra.  
+    25 October 2018, Parliamentary Library, Parliament of Australia, Canberra.  
+    24 October 2018, Australian National University, School of Politics and International Relations, Canberra. 
+* Exploring Australia's Hansard (1901--2017)  
+    (Poster) 7-9 September, 2018 Economic History Association Meeting, Montreal.
+* A Surnames-Based Analysis of Tasmanian Social Mobility (1803--2015)  
+    20 May 2016, UC Berkeley, Economic History Lunch, Berkeley.  
+    2 May 2016, Australian National University, Research School of Economics, Canberra.
+

@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+<style>
+  div.csl-bib-body { }
+  div.csl-entry {
+    clear: both;
+    }
+  .hanging div.csl-entry {
+    margin-left:2em;
+    text-indent:-2em;
+  }
+  div.csl-left-margin {
+    min-width:2em;
+    float:left;
+  }
+  div.csl-right-inline {
+    margin-left:2em;
+    padding-left:1em;
+  }
+  div.csl-indent {
+    margin-left: 2em;
+  }
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>On the privilege of turning our world into data</title>
+
+  <meta property="description" itemprop="description" content="A talk at the &#39;Young Irish Statisticians&#39; group."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-12-16"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-12-16"/>
+  <meta name="article:author" content="Rohan Alexander"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="On the privilege of turning our world into data"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A talk at the &#39;Young Irish Statisticians&#39; group."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="On the privilege of turning our world into data"/>
+  <meta property="twitter:description" content="A talk at the &#39;Young Irish Statisticians&#39; group."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=R for data science;citation_publication_date=2016;citation_publisher=O’Reilly;citation_author=Hadley Wickham;citation_author=Garrett Grolemund"/>
+  <meta name="citation_reference" content="citation_title=Advanced data science 2020;citation_publication_date=2020;citation_author=Jeff Leek;citation_author=Roger D. Peng"/>
+  <meta name="citation_reference" content="citation_title=Modern data science with r;citation_publication_date=2021;citation_author= Benjamin S. Baumer;citation_author=Nicholas J. Horton"/>
+  <meta name="citation_reference" content="citation_title=Data science: A first introduction;citation_publication_date=2021;citation_author=Tiffany-Anne Timbers;citation_author=Trevor Campbell;citation_author=Melissa Lee"/>
+  <meta name="citation_reference" content="citation_title=The hiring gambit: In search of the twofer data scientist;citation_publication_date=2019;citation_volume=1;citation_doi=10.1162/99608f92.440445cb;citation_author=Radu V. Craiu"/>
+  <meta name="citation_reference" content="citation_title=Statistical rethinking: A bayesian course with examples in r and stan;citation_publication_date=2020;citation_author=Richard McElreath"/>
+  <meta name="citation_reference" content="citation_title=Methods of statistics;citation_publication_date=1885;citation_publisher=JSTOR;citation_author=Francis Ysidro Edgeworth"/>
+  <meta name="citation_reference" content="citation_title=An essay on the population of dublin. Being the result of an actual survey taken in 1798, with great care and precision, and arranged in a manner entirely new;citation_publication_date=1905;citation_publisher=Graisberry; Campbell;citation_author=James Whitelaw"/>
+  <meta name="citation_reference" content="citation_title=The failure of united states maternal mortality reporting and its impact on women’s lives;citation_publication_date=2018;citation_publisher=NIH Public Access;citation_volume=45;citation_author=Marian F MacDorman;citation_author=Eugene Declercq"/>
+  <meta name="citation_reference" content="citation_title=Trends in maternal mortality 2000 to 2017: Estimates by WHO, UNICEF, UNFPA, world bank group and the united nations population division;citation_publication_date=2019;citation_author= WHO"/>
+  <meta name="citation_reference" content="citation_title=Computers, statistics and planning: Systems or chaos?;citation_publication_date=1968;citation_publisher=The Economic; Social Research Institute;citation_author=Gordon Foster"/>
+  <meta name="citation_reference" content="citation_title=Addressing &quot;documentation debt&quot; in machine learning research: A retrospective datasheet for BookCorpus;citation_publication_date=2021;citation_author=Jack Bandy;citation_author=Nicholas Vincent"/>
+  <meta name="citation_reference" content="citation_title=The increased effect of elections and changing prime ministers on topics discussed in the australian federal parliament between 1901 and 2018;citation_publication_date=2021;citation_author=Rohan Alexander;citation_author=Monica Alexander"/>
+  <meta name="citation_reference" content="citation_title=Detecting hate speech with GPT-3;citation_publication_date=2021;citation_author=Ke-Li Chiu;citation_author=Rohan Alexander"/>
+  <meta name="citation_reference" content="citation_title=Reproducibility of COVID-19 pre-prints;citation_publication_date=2021;citation_author=Annie Collins;citation_author=Rohan Alexander"/>
+  <meta name="citation_reference" content="citation_title=Heapsofpapers: Easily download heaps of PDF and CSV files;citation_publication_date=2021;citation_author=Rohan Alexander;citation_author=A Mahfouz"/>
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","bibliography","draft","collections"]}},"value":[{"type":"character","attributes":{},"value":["On the privilege of turning our world into data"]},{"type":"character","attributes":{},"value":["A talk at the 'Young Irish Statisticians' group.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Rohan Alexander"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["rohanalexander.com"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["2021-12-16"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["biblio.bib"]},{"type":"logical","attributes":{},"value":[false]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["posts"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["citations"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["biblio.bib","extract.png","on_the_privilege_of_turning_our_world_into_data_files/anchor-4.2.2/anchor.min.js","on_the_privilege_of_turning_our_world_into_data_files/bowser-1.9.3/bowser.min.js","on_the_privilege_of_turning_our_world_into_data_files/distill-2.2.21/template.v2.js","on_the_privilege_of_turning_our_world_into_data_files/header-attrs-2.11/header-attrs.js","on_the_privilege_of_turning_our_world_into_data_files/jquery-3.6.0/jquery-3.6.0.js","on_the_privilege_of_turning_our_world_into_data_files/jquery-3.6.0/jquery-3.6.0.min.js","on_the_privilege_of_turning_our_world_into_data_files/jquery-3.6.0/jquery-3.6.0.min.map","on_the_privilege_of_turning_our_world_into_data_files/popper-2.6.0/popper.min.js","on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy-bundle.umd.min.js","on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy-light-border.css","on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy.css","on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy.umd.min.js","on_the_privilege_of_turning_our_world_into_data_files/webcomponents-2.0.0/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/header-attrs-2.11/header-attrs.js"></script>
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/popper-2.6.0/popper.min.js"></script>
+  <link href="on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="on_the_privilege_of_turning_our_world_into_data_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"On the privilege of turning our world into data","description":"A talk at the 'Young Irish Statisticians' group.","authors":[{"author":"Rohan Alexander","authorURL":{"rohanalexander.com":{}},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-12-16T00:00:00.000-05:00","citationText":"Alexander, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>On the privilege of turning our world into data</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>A talk at the ‘Young Irish Statisticians’ group.</p></p>
+</div>
+
+<div class="d-byline">
+  Rohan Alexander true 
+  
+<br/>2021-12-16
+</div>
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#what-is-data-science">What is data science?</a></li>
+<li><a href="#what-we-can-learn-from-a-historical-dublin-census">What we can learn from a historical Dublin census?</a></li>
+<li><a href="#on-balance-between-data-and-science">On balance between data and science</a></li>
+<li><a href="#examples-of-my-work">Examples of my work</a>
+<ul>
+<li><a href="#effect-of-elections-and-changed-prime-ministers">Effect of elections and changed prime ministers</a></li>
+<li><a href="#explaining-why-text-is-sexist-or-racist-with-gpt-3">Explaining Why Text is Sexist or Racist with GPT-3</a></li>
+<li><a href="#reproducibility-of-covid-19-pre-prints">Reproducibility of COVID-19 pre-prints</a></li>
+</ul></li>
+<li><a href="#open-questions">Open questions</a>
+<ul>
+<li><a href="#how-do-we-write-unit-tests-for-data-science">How do we write unit tests for data science?</a></li>
+<li><a href="#what-happened-to-the-revolution">What happened to the revolution?</a></li>
+<li><a href="#how-do-we-think-about-power">How do we think about power?</a></li>
+</ul></li>
+<li><a href="#thank-you">Thank you</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</nav>
+</div>
+<p>The slides are <a href="https://rohanalexander.com/pdfs/young_irish_statisticians.pdf">here</a>.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Hi, my name is Rohan Alexander. I’m an assistant professor at the University of Toronto in the Faculty of Information and the Department of Statistical Sciences. I’m also one of the co-leads of the University of Toronto Data Sciences Institute Thematic Program in Reproducibility. We’d love to develop ties with other institutions who are similarly interested in these issues, so please do get in touch.</p>
+<p>I’d like to thank Niamh Cahill for the opportunity to talk today. I always feel a little awed by everything that she’s able to accomplish and all her publications. In preparing for this talk I was looking for imminent historical Irish statisticians, and of course arguably one of the most imminent present-day Irish statisticians is Adrian Raftery, who had a PhD student, Leontine Alkema, who was Niamh’s postdoc advisor. And Niamh certainly lives up to her pedigree.</p>
+<p>I must admit that I feel a bit of a fraud talking today at this Young Irish Statisticians group. I’m no longer young, I’m certainly not Irish, and I’m not a statistician. But I do adore your country, and I spend a lot of time with statisticians, and I was once young. That said, I do hope that in a few years you can invite me back and we can do this in person, perhaps at the middle-aged Irish-fans pseudo-statisticians’ group!</p>
+<p>Today I’d like to talk a little about the origins of data science, especially mentioning the contributions of some Irish statisticians. I will turn to what I see data science as, and what I see are some of our roles and responsibilities as quantitatively interested folks. I will then go through various applications including: understanding the effect of elections; hate speech detection; and the reproducibility of COVID-19 pre-prints. While going through those applications I will focus more on what I learned and how I developed, rather than specific results. I will close with a few open issues.</p>
+<p>None of what I’m about to say is cannon, this talk is more my way of trying to work out what I think, so I’d appreciate your reactions and comments.</p>
+<h2 id="what-is-data-science">What is data science?</h2>
+<p>When we think about data science, I think that we all have different things in mind.</p>
+<p>The only thing that is certain, is that there is no agreed definition of data science, but a lot of people have tried. For instance, <span class="citation" data-cites="hads"><a href="#ref-hads" role="doc-biblioref">Wickham and Grolemund</a> (<a href="#ref-hads" role="doc-biblioref">2016</a>)</span> say it is ‘…an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.’ Similarly, <span class="citation" data-cites="leekpeng"><a href="#ref-leekpeng" role="doc-biblioref">Leek and Peng</a> (<a href="#ref-leekpeng" role="doc-biblioref">2020</a>)</span> say it is ‘…the process of formulating a quantitative question that can be answered with data, collecting and cleaning the data, analyzing the data, and communicating the answer to the question to a relevant audience.’ <span class="citation" data-cites="nick"><a href="#ref-nick" role="doc-biblioref">Benjamin S. Baumer and Horton</a> (<a href="#ref-nick" role="doc-biblioref">2021</a>)</span> say it is ‘…the science of extracting meaningful information from data.’ And <span class="citation" data-cites="tiffany"><a href="#ref-tiffany" role="doc-biblioref">Timbers, Campbell, and Lee</a> (<a href="#ref-tiffany" role="doc-biblioref">2021</a>)</span> say they define ‘data science as the process of generating insight from data through reproducible and auditable processes.’</p>
+<p><span class="citation" data-cites="Craiu2019Hiring"><a href="#ref-Craiu2019Hiring" role="doc-biblioref">Craiu</a> (<a href="#ref-Craiu2019Hiring" role="doc-biblioref">2019</a>)</span> argues that the lack of certainty as to what data science is, might not matter because ‘…who can really say what makes someone a poet or a scientist?’ He goes on to broadly say that a data scientist is ‘…someone with a data driven research agenda, who adheres to or aspires to using a principled implementation of statistical methods and uses efficient computation skills.’</p>
+<p>Regardless of who is right, alongside those specific, more-technical, definitions, there is value in having a simple definition, even if we lose a bit of specificity. For instance, probability is often informally defined as ‘counting things’ <span class="citation" data-cites="richard">(<a href="#ref-richard" role="doc-biblioref">McElreath 2020, 10</a>)</span>. In a similar informal sense, data science can be defined as something like: ‘humans measuring stuff, typically related to other humans, and using sophisticated averaging to explain and predict.’</p>
+<p>That may sound a touch cute, but Francis Edgeworth, the Irish nineteenth century statistician and economist, who went to Trinity College Dublin, considered statistics to be the science ‘of those Means which are presented by social phenomena,’ so it is in good company <span class="citation" data-cites="edgeworth1885methods">(<a href="#ref-edgeworth1885methods" role="doc-biblioref">Edgeworth 1885</a>)</span>.</p>
+<p>In any case, one feature of this definition is that it does not treat data as terra nullius, or nobody’s land. Statisticians tend to see data as the result of some process that we can never know, but that we try to use data to come to understand. Many statisticians care deeply about data and measurement, but there are many cases in statistics where data kind of just appear; they belong to no one. But that is never actually the case.</p>
+<p>Data must be gathered, cleaned, and prepared, and these decisions matter. Every dataset is sui generis, or a class by itself, and so when you come to know one dataset well, you just know one dataset, not all datasets.</p>
+<p>More broadly, I think that much of data science focuses on the ‘science,’ but it is important that we also focus on ‘data.’ And that is another feature of my cutesy definition of data science which I posited before. A lot of data scientists are generalists, who are interested in a broad range of problems. Often, the thing that unites these is the need to gather, clean, and prepare messy data. And often it is the specifics of those data that require the most time, that update most often, and that are worthy of our most full attention. Unfortunately, it’s not typically the type of thing that is professionally rewarded.</p>
+<h2 id="what-we-can-learn-from-a-historical-dublin-census">What we can learn from a historical Dublin census?</h2>
+<p>At this point I’d like to look back, for a moment, at the origins of data science. If we look at the history of statistics, we very quickly find ourselves surrounded by Irish contributions.</p>
+<p>In preparing for this talk I was thrilled to learn about the book by the Reverend James Whitelaw, and this is its actual title, ‘An essay on the population of Dublin. Being the result of an actual survey taken in 1798, with great care and precision, and arranged in a manner entirely new’ <span class="citation" data-cites="whatasurvey">(<a href="#ref-whatasurvey" role="doc-biblioref">Whitelaw 1905</a>)</span>. I really do think that we all maybe need to adopt a little more of the Whitelaw’s detail in our paper titles!</p>
+<p>In any case, <span class="citation" data-cites="whatasurvey"><a href="#ref-whatasurvey" role="doc-biblioref">Whitelaw</a> (<a href="#ref-whatasurvey" role="doc-biblioref">1905</a>)</span> says that he is fed up with the bad estimates of the size of the population in various capitals. And he particularly singled out London, which he says has estimates that range anywhere between 128,570 and 300,000. Instead, he says that he intends to make an accurate count of the number of inhabitants of Dublin.</p>
+<p>He describes how:</p>
+<blockquote>
+<p>When I first entered on the business, I conceived that I should have little more to do than to transcribe carefully the list of inhabitants affixed to the door of each house by order of the Lord Mayor.</p>
+</blockquote>
+<p>Like many of us who spend our days in data, he found it was not that simple. Instead, he found:</p>
+<blockquote>
+<p>(t)he lists on the doors… presented generally to view a confused chaos of names, frequently illegible, and generally short of the actual number by a third, or even one-half’. He goes onto say that instead, he and his assistants braved ’the dread of infectious diseases,… filth, stench, and darkness,… to explore… every room of those wretched habitations, from the cellar to the garret, and on the spot ascertained their population.</p>
+</blockquote>
+<p>The resulting tables looked something like this (Figure <a href="#fig:iceberg">1</a>):</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure"><span style="display:block;" id="fig:iceberg"></span>
+<img src="extract.png" alt="Extract of the survey" width="85%" />
+<p class="caption">
+Figure 1: Extract of the survey
+</p>
+</div>
+</div>
+<p>And in case you’re interested, his estimate of the total population of Dublin in 1798 was estimated at 182,370.</p>
+<p>I was surprised by how confident Whitelaw was in his numbers. My PhD is in economic history, where I was interested in Australian economic history, especially political history. And the thing about economic historians is that we have to create, clean, and prepare our own datasets from whatever traces we can find before we can analyse it. So that training focuses one’s mind on measurement, and sampling.</p>
+<p>And there’s an odd phenomenon that I’ve observed where the further one is away from decisions to do with the counting, measurement, organisation, and categorisation, the more one tends to trust the resulting datasets. That is, the person that actually does the hard work of constructing our datasets is usually the one that trusts them the least.</p>
+<p>I’ve never understood this confidence that people have in datasets that they don’t construct themselves.</p>
+<p>It’s an absolute privilege to get to work in data science. To be able to feel, like Reverend Whitelaw did, that one is bringing some order to things. But it’s important to realise the perspective that one brings as one is doing that.</p>
+<p>Now my point here isn’t to attack Whitelaw, as he is long dead and incapable of defending himself, but, I skipped over a bunch of the actual quote in Whitelaw. In particular, after talking about that bit about just looking at the lists on the doors:</p>
+<blockquote>
+<p>As the families of the middle and upper classes always contained some individual who was competent to the task, and as few had any motive to conceal or misrepresent, I found their lists, in general, extremely correct; but among the lower class, which forms the great mass of the population of this city, the case was very different…. This I at first imputed to design, but was afterwards convinced that it proceeded from ignorance and incapacity.</p>
+</blockquote>
+<p>But how could he possibly know?</p>
+<p>To a certain extent we are wasting our time. We have a perfect model of the world—it is the world! But it is too complicated. If we knew perfectly how everything was affected by the uncountable factors that influence it, then we could perfectly forecast a coin toss, a dice roll, and every other seemingly random process each time. But we cannot. Instead, we must simplify things to that which is plausibly measurable, and it is that which we define as data. Our data are a simplification of the messy, complex, world from which they were generated.</p>
+<p>There are different approximations of ‘plausibly measurable.’ Hence, datasets are always the result of choices. We must decide whether they are nonetheless reasonable for the task at hand. We use statistical models to help us think deeply about, explore, and hopefully come to better understand, our data.</p>
+<p>Much of statistics is focused on considering, thoroughly, the data that we have. And that was appropriate for when our data were predominately agricultural, astronomical, or from the physical sciences. But with the rise of data science, mostly because of the value of its application to datasets generated by humans, we must also actively consider what is not in our dataset. Who is systematically missing from our dataset? Whose data does not fit nicely into the approach that we are using and are hence is being inappropriately simplified? If the process of the world becoming data necessarily involves abstraction and simplification, then we need to be clear about the points at which we can reasonably simplify, and those which would be inappropriate, recognising that this will be application specific.</p>
+<p>Data science needs diversity. And it’s one reason that I’m excited by all the initiatives to increase participation by women and other underrepresented groups. We need our labs, our classrooms, and of course, eventually, our startups and businesses to be representative of the broader society.</p>
+<p>The process of our world becoming data necessarily involves measurement. As I mentioned before, paradoxically, often those that do the measurement and are deeply immersed in the details have less trust in the data than those that are removed from it. Even seemingly clear tasks, such as measuring distance, defining boundaries, and counting populations, are surprisingly difficult in practice. Turning our world into data requires many decisions and imposes much error. Among many other considerations, we need to decide what will be measured, how accurately we will do this, and who will be doing the measurement.</p>
+<p>An important example of how something seemingly simple quickly becomes difficult is maternal mortality. That refers to the number of women who die while pregnant, or soon after a termination, from a cause related to the pregnancy or its management <span class="citation" data-cites="matmortality">(<a href="#ref-matmortality" role="doc-biblioref">WHO 2019</a>)</span>. It is difficult but critical to turn the tragedy of such a death into cause-specific data because that helps mitigate future deaths. Some countries have well-developed civil registration and vital statistics (CRVS). These collect data about every death. But many countries do not have a CRVS and so not every death is recorded. Even if a death is recorded, defining a cause of death may be difficult, especially when there is a lack of qualified medical personal or equipment. Maternal mortality is especially difficult because there are typically many causes. Some CRVS have a checkbox on the form to specify whether the death should be counted as maternal mortality. But even some developed countries have only recently adopted this. For instance, it was only introduced in the US in 2003, and even in 2015 Alabama, California, and West Virginia had not adopted the standard question <span class="citation" data-cites="macdorman2018failure">(<a href="#ref-macdorman2018failure" role="doc-biblioref">MacDorman and Declercq 2018</a>)</span>.</p>
+<h2 id="on-balance-between-data-and-science">On balance between data and science</h2>
+<p>I mentioned at the start of the talk that I’m appointed in both the Faculty of Information and the Department of Statistical Sciences. For those who don’t know, faculties of information were created around the turn of the century to train librarians. Library science of course has a long and distinguished history of archiving, categorising, storing, and retrieving information, and for a long time when computers were first developed, a lot of the initial work was done by librarians, or at libraries. I suspect there is a gendered aspect to this, with librarians often being female, but a lot of that work was systematically overlooked and was re-invented later. This continues today, with our library at the University of Toronto doing excellent work that is consistently overlooked. I used to feel a bit funny about being jointly appointed, but it turns out that the first chair of the Department of Statistics at Trinity College Dublin, Gordon Foster, was not only a statistician, but he also created the International Book Numbering System (ISBN), which we still use today.</p>
+<p>In 1968 Foster gave the Geary Lecture at the Economic and Social Research Institute in Dublin <span class="citation" data-cites="foster">(<a href="#ref-foster" role="doc-biblioref">Foster 1968</a>)</span>. And I think it is worth revisiting that talk because he was clearly, yet another, Irish statistician who was well ahead of his time.</p>
+<p><span class="citation" data-cites="foster"><a href="#ref-foster" role="doc-biblioref">Foster</a> (<a href="#ref-foster" role="doc-biblioref">1968</a>)</span> first describes how:</p>
+<blockquote>
+<p>[j]ust prior to the time when my own career in statistics was commencing, an important development took place in which I was therefore able to participate straight away, and which has since had a great effect on the development of the subject. I mean of course the invention of the computer.</p>
+</blockquote>
+<p>It’s funny, but fifty years on, I actually feel the same way about my career!</p>
+<p><span class="citation" data-cites="foster"><a href="#ref-foster" role="doc-biblioref">Foster</a> (<a href="#ref-foster" role="doc-biblioref">1968</a>)</span> goes on to say that</p>
+<blockquote>
+<p>it was something of an achievement to get a programme actually working. It was useful to have handy a screwdriver and scotch-tape, and to know where to kick the machine if it stuck.</p>
+</blockquote>
+<p>And as someone who gets the privilege to write code for living, I do wonder if much has changed!</p>
+<p>It’s interesting that <span class="citation" data-cites="foster"><a href="#ref-foster" role="doc-biblioref">Foster</a> (<a href="#ref-foster" role="doc-biblioref">1968</a>)</span> points very clearly to data science in this talk, where he says:</p>
+<blockquote>
+<p>(s)tatistics are concerned with the processing and analysis of masses of data and with the development of mathematical methods of extracting information from data. Combine all this activity with computer methods and you have something more than the sum of its parts.</p>
+</blockquote>
+<p>Talking about computers at the time, <span class="citation" data-cites="foster"><a href="#ref-foster" role="doc-biblioref">Foster</a> (<a href="#ref-foster" role="doc-biblioref">1968</a>)</span> says:</p>
+<blockquote>
+<p>(t)hey are capable of performing any structured task, from planning a hospital diet, retrieving a legal precedent, or controlling stocks in a warehouse, to playing a reasonably good game of chess… I think, we begin to realise that the endeavour which I have referred to as information technology is no longer something just affecting specialists, but is bringing about changes in society affecting us all.</p>
+</blockquote>
+<p>How easy it would be to change ‘information technology’ to ‘data science’ in those quotes for them to ring true almost a lifetime after they were spoken.</p>
+<p>We always use various instruments to turn the world into data. For instance, in astronomy, the development of better telescopes, and eventually satellites and probes, enabled new understanding of other worlds. We similarly have new instruments for turning our own world into data being developed each day.</p>
+<p>In the social sciences, a census was once a generational-defining event. And it’s appropriate that this talk happens near the Christmas holidays given the role that the census played in that event. But now we have regular surveys, transactions data available by the second, and almost all interactions on the internet become data of some kind. The development of such instruments has enabled exciting new stories to be told with data.</p>
+<p>I think for the past ten years or so, we’ve had the balance wrong in data science. There has been too much focus on the ‘science’ bit, without sufficient focus on the ‘data’ bit.</p>
+<p>It is not just the ‘science’ bit that is hard, it is the ‘data’ bit as well. I feel that Foster would have known this, and we are just reinventing things. For instance, researchers went back and examined one of the most popular text datasets in computer science, and they found that around 30 per cent of the data were inappropriately duplicated <span class="citation" data-cites="bandy2021addressing">(<a href="#ref-bandy2021addressing" role="doc-biblioref">Bandy and Vincent 2021</a>)</span>. There is an entire field—linguistics—that specialises in these types of datasets, and inappropriate use of data is one of the dangers of any one field being hegemonic. The strength of data science is that it brings together folks with a variety of backgrounds and training to the task of learning about some dataset. It is not constrained by what was done in the past. But this means that we must go out of our way to show respect for those who do not come from our own tradition, but who are nonetheless as similarly interested in a dataset, or in a question, as we are.</p>
+<p>I’m picking on CS a little here, but my home of the social sciences is just as bad and researchers like me are trying to refocus us on data a little more than we have been in the past.</p>
+<p>So what are some examples of things that I work on?</p>
+<h2 id="examples-of-my-work">Examples of my work</h2>
+<p>I mentioned that my PhD is in economic history, but I spent most of my PhD trying to deal with big text datasets. And when I say ‘dealing’ I mean using R to clean and tidy them, which was the work of years. My supervisors—John Tang, Tim Hatton, Martine Mariotti, and Zach Ward—gave me the freedom to do what I wanted, with regular weekly meetings. It’s not a topic that traditionally would have been appropriate in economics, and I’m grateful they gave me the space because traditional economics is not for me, but data science is.</p>
+<h3 id="effect-of-elections-and-changed-prime-ministers">Effect of elections and changed prime ministers</h3>
+<p>One result of this work was the paper—<em>The Increased Effect of Elections and Changing Prime Ministers on Topics Discussed in the Australian Federal Parliament between 1901 and 2018</em>—<span class="citation" data-cites="alexander2021increased">(<a href="#ref-alexander2021increased" role="doc-biblioref">Alexander and Alexander 2021</a>)</span> which was co-authored with my wife Monica. In Australia there is a written record of what is said in parliament called Hansard. We grabbed the text of everything said between 1901 and 2018 and then built a statistical model to look at whether the topics of discussion changed when there was an election or when there was a change in the prime minister. We found that changes in prime minister tend to be associated with topic changes even when the party in power does not change; and the effect of elections has been increasing since the 1980s, regardless of whether the election results in a change of prime minister.</p>
+<h4 id="lesson-always-start-small-and-then-iterate.">Lesson: Always start small and then iterate.</h4>
+<p>I came to that paper hopelessly naive and lost. I didn’t know that text analysis, and natural language processing more generally, was something that was incredibly popular. I didn’t have the skills that I needed, and really all I had was an all-consuming interest in the broad area - I didn’t even have a question. The dataset has over a billion words in it. So the main lesson for me was in dealing with big datasets. And here I don’t mean in terms of technical skills, I mean in terms of approach. These days when I have students and they want to use the Hansard or any large dataset, I start by insisting that they just use one month of data. After they analyse and write that up, then they can go to a year, and then they can continue to build up slowly.</p>
+<p>The reason that I know now that’s the best way to go is that I somehow convinced myself that I couldn’t possibly answer any interesting questions until I had a century worth of data. And because I was teaching myself everything as I went, it took me more than a year to just get the data into a usable format.</p>
+<p>If you take nothing away from this talk, please I beg you take this away: the most important, vital thing, is that you create a minimal viable product of any research. And that minimal viable product needs to be something that you can finish within a week. If you can’t do that then adjust the scope and the question until you can. Then you achieve that MVP and then you start to scale up to the question that you’re interested in, which is hopefully something that can be published.</p>
+<h3 id="explaining-why-text-is-sexist-or-racist-with-gpt-3">Explaining Why Text is Sexist or Racist with GPT-3</h3>
+<p>As anyone who has cared for young children knows, the response to almost any statement can be ‘why?’ One can quickly find oneself trying to explain the finer details of photosynthesis to a 3-year-old, and the extent to which one struggles with this tends to put in sharp relief the extent of one’s knowledge. Large language models such as OpenAI’s GPT-3 can generate text that is indistinguishable from that created by humans. They can also classify whether some given text is sexist or racist <span class="citation" data-cites="chiu2021detecting">(<a href="#ref-chiu2021detecting" role="doc-biblioref">Chiu and Alexander 2021</a>)</span>.</p>
+<p>In the paper—<em>Explaining Why Text is Sexist or Racist with GPT-3</em>—which was co-authored by Ke-Li Chiu we assess the extent to which GPT-3 can generate explanations for why a given text is sexist or racist. We prompt GPT-3 to generate explanations in a question-and-answer manner: ‘Is the following statement in quotes sexist? Answer yes or no and explain why.’ We then assess the adequacy of the explanations generated by GPT-3. We are interested in firstly, the extent to which it correctly classifies whether the statements are sexist/racist; and secondly, the reasonableness of the explanation that accompanies that classification.</p>
+<p>We find that GPT-3 does poorly in the open-ended approach. When we add more structure to guide its responses the model performs better. But even when it correctly classifies racism or sexism, the accompanying explanations are often inaccurate. At times they even contradict the classification. On a technical level, we find a clear relationship between the hyper-parameter temperature and the number of correctly matched attributes, with substantial decreases as temperature increases.</p>
+<h4 id="lesson-always-teach">Lesson: Always teach</h4>
+<p>I just used a bunch of terms there and you probably assume that I know what they mean. In writing the paper that preceded this one, I actually fooled myself into thinking that I knew what they meant. It wasn’t until I tried to teach the material that I realised that I didn’t have a clue what was going on.</p>
+<p>A lot of my colleagues try to get out of teaching, and I can understand why they would think that, but I’ve found that having to teach has made me a better researcher. For one reason, I found that it’s too easy to fool yourself into thinking you know something until you have to explain it. And I also kind of think that a lot of us in academia need pressure, constraints, and a weekly structure, in order to do our best work.</p>
+<h3 id="reproducibility-of-covid-19-pre-prints">Reproducibility of COVID-19 pre-prints</h3>
+<p>The final paper that I’d like to touch on is—<em>Reproducibility of COVID-19 pre-prints</em>—by Annie Collins and me <span class="citation" data-cites="collins2021reproducibility">(<a href="#ref-collins2021reproducibility" role="doc-biblioref">Collins and Alexander 2021</a>)</span>. In that paper we are interested in the reproducibility of COVID-19 research. We create a dataset of pre-prints posted to arXiv, bioRxiv, medRxiv, and SocArXiv between 28 January 2020 and 30 June 2021 that are related to COVID-19. We extract the text from these pre-prints and parse them looking for keyword markers signalling the availability of the data and code underpinning the pre-print. For the pre-prints that are in our sample, we are unable to find markers of either open data or open code for 75 per cent of those on arXiv, 67 per cent of those on bioRxiv, 79 per cent of those on medRxiv, and 85 per cent of those on SocArXiv. We conclude that there may be value in having authors categorize the degree of openness of their pre-print as part of the pre-print submissions process, and more broadly, there is a need to better integrate open science training into a wide range of fields.</p>
+<h4 id="lesson-you-always-need-the-code-more-than-once">Lesson: You always need the code more than once</h4>
+<p>I went into that paper thinking that I’d just quickly write some code to download some files and then be done with it. But then Annie wanted to broaden the scope of the paper, so the code needed to be re-written because she couldn’t understand what I’d done. And then we had to re-run the code because we wanted to update everything before she presented the paper. And that meant re-writing things. And then we to re-run the code before we submitted the paper. Again that meant re-writing things.</p>
+<p>We eventually just turned the code into an R package, which is on CRAN as <a href="https://rohanalexander.github.io/heapsofpapers/">heapsofpapers</a> <span class="citation" data-cites="heaps">(<a href="#ref-heaps" role="doc-biblioref">Alexander and Mahfouz 2021</a>)</span>. Which is what I should have done from the start. The lesson that I learnt from this paper is that regardless of how certain you are that you’ll never use some particular code again, you’ll always need it.</p>
+<h2 id="open-questions">Open questions</h2>
+<h3 id="how-do-we-write-unit-tests-for-data-science">How do we write unit tests for data science?</h3>
+<p>One thing that working with real computer scientists has taught me is the importance of unit tests. Basically this just means writing down the small checks that we do in our heads all the time. Like if we have a column that purports to the year, then it’s unlikely that it’s a character, and it’s unlikely that it’s an integer larger than 2500, and it’s unlikely that it’s a negative integer. We know all this, but writing unit tests has us write this all down.</p>
+<p>In this case it’s obvious what the unit test looks like. But more generally, we often have little idea what our results should look like if they’re running well. The approach that I’ve taken is to add simulation - so we simulate reasonable results, write unit tests based on that, and then bring the real data to bear and adjust as necessary. But I really think that we need extensive work in this area because the current state-of-the-art is lacking.</p>
+<h3 id="what-happened-to-the-revolution">What happened to the revolution?</h3>
+<p>I don’t understand what happened to the promised machine learning revolution in social sciences. Specifically, I’m yet to see any convincing application of machine learning methods that are designed for prediction to a social sciences problem where what we care about is understanding. I would like to either see evidence of them or a definitive thesis about why this can’t happen. The current situation is untenable where folks, especially those in fields that have been historically female, are made to feel inferior even though their results are no worse.</p>
+<h3 id="how-do-we-think-about-power">How do we think about power?</h3>
+<p>As someone who learnt statistics from economists, but now is partly in a statistics department, I do think that everyone should learn statistics from statisticians. This isn’t anything against economists, but the conversations that I have in the statistics department about what statistical methods are and how they should be used are very different to those that I’ve had in other departments.</p>
+<p>I think the problem is that people outside statistics, treat statistics as a recipe in which they follow various steps and then out comes a cake. With regard to ‘power’—it turns out that there were a bunch of instructions that no one bothered to check—they turned the oven on to some temperature without checking that it was 180C, and that’s fine because whatever mess came out was accepted because the people evaluating the cake didn’t know that they needed to check the temperature had been appropriately set. (I’m ditching this analogy right now).</p>
+<p>As you know, the issue with power is related to the broader discussion about p-values, which basically no one is taught properly, because it would require changing an awful lot about how we teach statistics i.e. moving away from the recipe approach.</p>
+<p>And so, my specific issue is that people think that statistics is a recipe to be followed. They think that because that’s how they are trained especially in social sciences like political science and economics, and that’s what is rewarded. But that’s not what these methods are. Instead, statistics is a collection of different instruments that let us look at our data in a certain way. I think that we need a revolution here, not a metaphorical tucking in of one’s shirt.</p>
+<h2 id="thank-you">Thank you</h2>
+<p>Right. So I think I’ll leave it there. Thank you again to Niamh for inviting me. And I hope that I haven’t bored you all too much.Merry Christmas, happy holidays, and I hope everyone has a wonderful start to 2022.</p>
+<p>I’d be happy to take any questions.</p>
+<h2 class="appendix" id="acknowledgments">Acknowledgments</h2>
+<p>Thanks very much to Niamh Cahill for the invitation to speak, and to Monica Alexander for her suggestions and comments.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-alexander2021increased" class="csl-entry" role="doc-biblioentry">
+Alexander, Rohan, and Monica Alexander. 2021. <span>“The Increased Effect of Elections and Changing Prime Ministers on Topics Discussed in the Australian Federal Parliament Between 1901 and 2018.”</span> <a href="http://arxiv.org/abs/2111.09299">http://arxiv.org/abs/2111.09299</a>.
+</div>
+<div id="ref-heaps" class="csl-entry" role="doc-biblioentry">
+Alexander, Rohan, and A Mahfouz. 2021. <em>Heapsofpapers: Easily Download Heaps of PDF and CSV Files</em>. <a href="https://CRAN.R-project.org/package=heapsofpapers">https://CRAN.R-project.org/package=heapsofpapers</a>.
+</div>
+<div id="ref-bandy2021addressing" class="csl-entry" role="doc-biblioentry">
+Bandy, Jack, and Nicholas Vincent. 2021. <span>“Addressing "Documentation Debt" in Machine Learning Research: A Retrospective Datasheet for BookCorpus.”</span> <a href="http://arxiv.org/abs/2105.05241">http://arxiv.org/abs/2105.05241</a>.
+</div>
+<div id="ref-nick" class="csl-entry" role="doc-biblioentry">
+Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton. 2021. <em>Modern Data Science with r</em>. 2nd ed. <a href="https://mdsr-book.github.io/mdsr2e/">https://mdsr-book.github.io/mdsr2e/</a>.
+</div>
+<div id="ref-chiu2021detecting" class="csl-entry" role="doc-biblioentry">
+Chiu, Ke-Li, and Rohan Alexander. 2021. <span>“Detecting Hate Speech with GPT-3.”</span> <a href="http://arxiv.org/abs/2103.12407">http://arxiv.org/abs/2103.12407</a>.
+</div>
+<div id="ref-collins2021reproducibility" class="csl-entry" role="doc-biblioentry">
+Collins, Annie, and Rohan Alexander. 2021. <span>“Reproducibility of COVID-19 Pre-Prints.”</span> <a href="http://arxiv.org/abs/2107.10724">http://arxiv.org/abs/2107.10724</a>.
+</div>
+<div id="ref-Craiu2019Hiring" class="csl-entry" role="doc-biblioentry">
+Craiu, Radu V. 2019. <span>“The Hiring Gambit: In Search of the Twofer Data Scientist.”</span> <em>Harvard Data Science Review</em> 1 (1). <a href="https://doi.org/10.1162/99608f92.440445cb">https://doi.org/10.1162/99608f92.440445cb</a>.
+</div>
+<div id="ref-edgeworth1885methods" class="csl-entry" role="doc-biblioentry">
+Edgeworth, Francis Ysidro. 1885. <span>“Methods of Statistics.”</span> <em>Journal of the Statistical Society of London</em>, 181–217.
+</div>
+<div id="ref-foster" class="csl-entry" role="doc-biblioentry">
+Foster, Gordon. 1968. <span>“Computers, Statistics and Planning: Systems or Chaos?”</span> <em>Geary Lecture</em>. <a href="https://www.esri.ie/system/files/media/file-uploads/2016-03/GLS2.pdf">https://www.esri.ie/system/files/media/file-uploads/2016-03/GLS2.pdf</a>.
+</div>
+<div id="ref-leekpeng" class="csl-entry" role="doc-biblioentry">
+Leek, Jeff, and Roger D. Peng. 2020. <em>Advanced Data Science 2020</em>. <a href="http://jtleek.com/ads2020/index.html">http://jtleek.com/ads2020/index.html</a>.
+</div>
+<div id="ref-macdorman2018failure" class="csl-entry" role="doc-biblioentry">
+MacDorman, Marian F, and Eugene Declercq. 2018. <span>“The Failure of United States Maternal Mortality Reporting and Its Impact on Women’s Lives.”</span> <em>Birth (Berkeley, Calif.)</em> 45 (2): 105.
+</div>
+<div id="ref-richard" class="csl-entry" role="doc-biblioentry">
+McElreath, Richard. 2020. <em>Statistical Rethinking: A Bayesian Course with Examples in r and Stan</em>. 2nd ed.
+</div>
+<div id="ref-tiffany" class="csl-entry" role="doc-biblioentry">
+Timbers, Tiffany-Anne, Trevor Campbell, and Melissa Lee. 2021. <em>Data Science: A First Introduction</em>. <a href="https://ubc-dsci.github.io/introduction-to-datascience/">https://ubc-dsci.github.io/introduction-to-datascience/</a>.
+</div>
+<div id="ref-whatasurvey" class="csl-entry" role="doc-biblioentry">
+Whitelaw, James. 1905. <em>An Essay on the Population of Dublin. Being the Result of an Actual Survey Taken in 1798, with Great Care and Precision, and Arranged in a Manner Entirely New</em>. Graisberry; Campbell.
+</div>
+<div id="ref-matmortality" class="csl-entry" role="doc-biblioentry">
+WHO. 2019. <span>“Trends in Maternal Mortality 2000 to 2017: Estimates by WHO, UNICEF, UNFPA, World Bank Group and the United Nations Population Division.”</span> <a href="https://www.who.int/reproductivehealth/publications/maternal-mortality-2000-2017/en/">https://www.who.int/reproductivehealth/publications/maternal-mortality-2000-2017/en/</a>.
+</div>
+<div id="ref-hads" class="csl-entry" role="doc-biblioentry">
+Wickham, Hadley, and Garrett Grolemund. 2016. <em>R for Data Science</em>. O’Reilly. <a href="https://r4ds.had.co.nz">https://r4ds.had.co.nz</a>.
+</div>
+</div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

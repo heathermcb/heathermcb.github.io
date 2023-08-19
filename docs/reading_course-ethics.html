@@ -1,0 +1,2329 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { color: #00769e; background-color: #f1f3f5; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #00769e; } /* Normal */
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #657422; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #00769e; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #00769e; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #00769e; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Rohan Alexander: Ethics and Data Science</title>
+
+  <meta property="description" itemprop="description" content="This is a course focused on the intersection of ethics and data science."/>
+
+  <link rel="icon" type="image/svg+xml" href="images/user-astronaut-solid.svg"/>
+
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Rohan Alexander: Ethics and Data Science"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="This is a course focused on the intersection of ethics and data science."/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Rohan Alexander"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Rohan Alexander: Ethics and Data Science"/>
+  <meta property="twitter:description" content="This is a course focused on the intersection of ethics and data science."/>
+  <meta property="twitter:site" content="@RohanAlexander"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Ethics and Data Science"]},{"type":"character","attributes":{},"value":["This is a course focused on the intersection of ethics and data science.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.2.1/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.2.1/css/v4-shims.min.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+    font-size: 100%;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+  .nav-dropdown-content {
+    color: #F0A202;
+    background-color: #14213d;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #14213d;
+  }
+
+  .nav-dropdown-content a{
+    color: #F0A202;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: #F0A202;
+  }
+
+  .distill-site-nav {
+    color: #F0A202;
+    font-weight: bold;
+    background-color: #14213d;
+  }
+
+  .distill-site-nav a:hover {
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+
+  body {
+    background-color: #FFFFFF;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #283044;
+  }
+
+  h2 {
+    color: #283044;
+  }
+
+  d-article h2 {
+  	border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Use specific font in the body of the text */
+  html, body, p {
+    
+    font-family: 'Raleway', sans-serif;
+
+    
+  }
+  </style>
+  <!--/radix_placeholder_site_in_header-->
+
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Ethics and Data Science","description":"This is a course focused on the intersection of ethics and data science.","authors":[]}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">Rohan Alexander</a>
+</div>
+<div class="nav-right">
+<a href="index.html">Home</a>
+<a href="teaching.html">Teaching</a>
+<a href="toronto_data_workshop.html">Toronto Data Workshop</a>
+<a href="blog.html">Blog</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Other
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="bookshelf.html">Bookshelf</a>
+<a href="reproducibility.html">Toronto Workshop on Reproducibility</a>
+</div>
+</div>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Ethics and Data Science</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>This is a course focused on the intersection of ethics and data science.</p></p>
+</div>
+
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#preamble" id="toc-preamble">Preamble</a>
+<ul>
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#faq" id="toc-faq">FAQ</a></li>
+<li><a href="#acknowledgements" id="toc-acknowledgements">Acknowledgements</a></li>
+</ul></li>
+<li><a href="#content" id="toc-content">Content</a>
+<ul>
+<li><a href="#week-1---general" id="toc-week-1---general">Week 1 - General</a></li>
+<li><a href="#week-2---data-and-consent" id="toc-week-2---data-and-consent">Week 2 - Data and consent</a></li>
+<li><a href="#week-3---women-and-gender" id="toc-week-3---women-and-gender">Week 3 - Women and gender</a></li>
+<li><a href="#week-4---race" id="toc-week-4---race">Week 4 - Race</a></li>
+<li><a href="#week-5---natural-language-processing" id="toc-week-5---natural-language-processing">Week 5 - Natural Language Processing</a></li>
+<li><a href="#week-6---ai-ethics" id="toc-week-6---ai-ethics">Week 6 - AI Ethics</a></li>
+<li><a href="#week-7---privacy" id="toc-week-7---privacy">Week 7 - Privacy</a></li>
+<li><a href="#week-8---imagesvideo-with-particular-reference-to-facial-recognition" id="toc-week-8---imagesvideo-with-particular-reference-to-facial-recognition">Week 8 - Images/video with particular reference to facial recognition</a></li>
+<li><a href="#week-9---corporate-surveillance" id="toc-week-9---corporate-surveillance">Week 9 - Corporate Surveillance</a></li>
+<li><a href="#week-10---privacy-and-surveillance-in-canada-and-other-countries" id="toc-week-10---privacy-and-surveillance-in-canada-and-other-countries">Week 10 - Privacy and surveillance in Canada and other countries</a></li>
+<li><a href="#week-11---algorithmic-decision-making" id="toc-week-11---algorithmic-decision-making">Week 11 - Algorithmic decision-making</a></li>
+<li><a href="#week-12---history-of-ethical-concerns-broadly-and-domain-specific-ethical-practices" id="toc-week-12---history-of-ethical-concerns-broadly-and-domain-specific-ethical-practices">Week 12 - History of ethical concerns broadly, and domain-specific ethical practices</a></li>
+</ul></li>
+<li><a href="#assessment" id="toc-assessment">Assessment</a>
+<ul>
+<li><a href="#four-ethical-and-technical-blog-posts-30-per-cent" id="toc-four-ethical-and-technical-blog-posts-30-per-cent">Four ethical and technical blog posts (30 per cent)</a></li>
+<li><a href="#paper-1-30-per-cent" id="toc-paper-1-30-per-cent">Paper 1 (30 per cent)</a></li>
+<li><a href="#paper-2-40-per-cent" id="toc-paper-2-40-per-cent">Paper 2 (40 per cent)</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h2 id="preamble">Preamble</h2>
+<h3 id="overview">Overview</h3>
+<p>The purpose of this course is to develop students who can:</p>
+<ul>
+<li>engage in thoughtful, ethical, critique of data science, its antecedents, current state, and likely evolution; and</li>
+<li>work productively to implement existing data science methods, as well as contribute to the creation of novel methods or applications.</li>
+</ul>
+<p>Each week students will read relevant papers and books, engage with them through discussion with each other and the instructor, learn related technical skills, and bring this together through on-going assessment. All students are expected to be prepared for each week’s discussion through completing the readings and technical requirements. A specific student will act as the lead for each week.</p>
+<p>The course outline is available <a href="pdfs/2021-ethics_and_data_science.pdf">here</a>.</p>
+<h3 id="faq">FAQ</h3>
+<ul>
+<li>Can I audit this course? Sure, but the concept of auditing doesn’t make sense for this course. There are no lectures, we have weekly discussions. You’re welcome to come along to the discussions if you’d like but please do the readings first.</li>
+</ul>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Thanks to the following who helped develop this course: A Mahfouz, Assel Kushkeyeva, Irene Duah-Kessie, Ke-li Chiu, Paul Hodgetts, and Thomas Rosenthal.</p>
+<h2 id="content">Content</h2>
+<h3 id="week-1---general">Week 1 - General</h3>
+<!-- *Brian Cantwell Smith, Reid Hoffman Professor of Artificial Intelligence and the Human, University of Toronto, will be invited to join the discussion briefly this week.* -->
+<h4 id="ethical">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Cantwell Smith, Brian, 2019, <em>The Promise of AI</em>, MIT Press, Chapters 10-12.</li>
+<li>Healy, Kieran, 2020, ‘The Kitchen Counter Observatory’, 21 May, <a href="https://kieranhealy.org/blog/archives/2020/05/21/the-kitchen-counter-observatory/" class="uri">https://kieranhealy.org/blog/archives/2020/05/21/the-kitchen-counter-observatory/</a>.</li>
+<li>Keyes, Os, 2019, ‘Counting the Countless’, <em>Real Life</em>, 8 April, <a href="https://reallifemag.com/counting-the-countless/" class="uri">https://reallifemag.com/counting-the-countless/</a>.</li>
+<li>O’Neil, Cathy, 2016, <em>Weapons of Math Destruction</em>, Crown Books, Chapters 1, 3, and 4.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Green, Ben, 2018, ‘Data Science as Political Action: Grounding Data Science in a Politics of Justice’, <em>arXiv</em>, 1811.03435, <a href="https://arxiv.org/abs/1811.03435" class="uri">https://arxiv.org/abs/1811.03435</a>.</li>
+<li>Irving, Geoffrey, and Amanda Askell, 2019, ‘AI Safety Needs Social Scientists’, <em>Distill</em>, 19 February, <a href="https://distill.pub/2019/safety-needs-social-scientists/" class="uri">https://distill.pub/2019/safety-needs-social-scientists/</a>.</li>
+<li>Leslie, David, 2020, ‘Tackling COVID-19 through Responsible AI Innovation: Five Steps in the Right Direction’, <em>Harvard Data Science Review</em>, 5 June, <a href="https://hdsr.mitpress.mit.edu/pub/as1p81um" class="uri">https://hdsr.mitpress.mit.edu/pub/as1p81um</a>.</li>
+<li>Suresh, Harini, and John V. Guttag, 2019, ‘A Framework for Understanding Unintended Consequences of Machine Learning’, <em>arXiv</em>, 1901.10002, <a href="https://arxiv.org/abs/1901.10002" class="uri">https://arxiv.org/abs/1901.10002</a>.</li>
+<li>Raji, Inioluwa Deborah, 2020, ‘The Discomfort of Death Counts: Mourning through the Distorted Lens of Reported COVID-19 Death Data’, <em>Patterns</em>, <a href="https://doi.org/10.1016/j.patter.2020.100066" class="uri">https://doi.org/10.1016/j.patter.2020.100066</a></li>
+</ul>
+<h4 id="technical">Technical</h4>
+<ul>
+<li>Review ‘Essentials’ from <em>Telling Stories With Data</em>, if necessary.</li>
+</ul>
+<h3 id="week-2---data-and-consent">Week 2 - Data and consent</h3>
+<!-- *Nina Yiannopoulos, Director, Data Protection and Privacy, Deloitte Australia, will be invited to join the discussion briefly this week.* -->
+<h4 id="ethical-1">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Boykis, Vicki, 2019, ‘Neural nets are just people all the way down’, 16 October, <a href="https://vicki.substack.com/p/neural-nets-are-just-people-all-the" class="uri">https://vicki.substack.com/p/neural-nets-are-just-people-all-the</a>.</li>
+<li>Crawford, Kate, and Vladan Joler, 2018, ‘Anatomy of an AI System: The Amazon Echo As An Anatomical Map of Human Labor, Data and Planetary Resources’, <em>AI Now Institute and Share Lab</em>, 7 September, <a href="https://anatomyof.ai" class="uri">https://anatomyof.ai</a>.</li>
+<li>Crawford, Kate, 2020, ‘Kate Crawford: Anatomy of AI’, Lecture, University of New South Wales, 28 January, <a href="https://youtu.be/uM7gqPnmDDc" class="uri">https://youtu.be/uM7gqPnmDDc</a>.</li>
+<li>Kitchin, Rob, 2014, <em>The data revolution: Big data, open data, data infrastructures and their consequences</em>, Sage, Introduction, Chapters 8, and 10. (Access via U of T library).</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Bergis Jules, Ed Summers and Vernon Mitchell, 2018, ‘Documenting The Now: Ethical Considerations for Archiving Social Media Content Generated by Contemporary Social Movements: Challenges, Opportunities, and Recommendations’, White Paper, DocNow, <a href="https://www.docnow.io/docs/docnow-whitepaper-2018.pdf" class="uri">https://www.docnow.io/docs/docnow-whitepaper-2018.pdf</a>.</li>
+<li>Boyd, Danah, and Kate Crawford, 2012, ‘Critical Questions for Big Data’, <em>Information, Communication &amp; Society</em>, 15(55), 662-679, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2012/05/CriticalQuestionsForBigDataICS.pdf" class="uri">https://www.microsoft.com/en-us/research/wp-content/uploads/2012/05/CriticalQuestionsForBigDataICS.pdf</a>.</li>
+<li>Denton, Emily, Alex Hanna, Razvan Amironesei, Andrew Smart, Hilary Nicole, Morgan Klaus Scheuerman, 2020, ‘Bringing the People Back In: Contesting Benchmark Machine Learning Datasets’, <em>arXiv</em>, 14 July, <a href="https://arxiv.org/abs/2007.07399" class="uri">https://arxiv.org/abs/2007.07399</a>.</li>
+<li>Eubanks, Virginia, 2019, ‘Automating Inequality: How high-tech tools profile, police and punish the poor’, Lecture, University of Toronto, 12 March, <a href="https://www.youtube.com/watch?v=g1ZZZ1QLXOI" class="uri">https://www.youtube.com/watch?v=g1ZZZ1QLXOI</a>.</li>
+<li>Lemov, Rebecca, 2016, ‘Big data is people!’, <em>Aeon</em>, 16 June, <a href="https://aeon.co/essays/why-big-data-is-actually-small-personal-and-very-human" class="uri">https://aeon.co/essays/why-big-data-is-actually-small-personal-and-very-human</a>.</li>
+<li>Office of Oversight and Investigations Majority Staff, 2013, ‘A Review of the Data Broker Industry: Collection, Use, and Sale of Consumer Data for Marketing Purposes’, <em>Staff Report for Chairman Rockefeller</em>, 18 December, United States Senate, Committee on Commerce, Science and Transportation, <a href="https://www.commerce.senate.gov/services/files/0d2b3642-6221-4888-a631-08f2f255b577" class="uri">https://www.commerce.senate.gov/services/files/0d2b3642-6221-4888-a631-08f2f255b577</a>.</li>
+<li>Radin, Joanna, 2017, ‘“Digital Natives”: How Medical and Indigenous Histories Matter for Big Data’, <em>Osiris</em>, 32 (1), 43-64, <a href="https://www.journals.uchicago.edu/doi/pdf/10.1086/693853" class="uri">https://www.journals.uchicago.edu/doi/pdf/10.1086/693853</a>.</li>
+<li>Snowberg, Erik and Leeat Yariv, 2018, ‘Testing The Waters: Behavior Across Participant Pools’, <em>NBER Working Paper</em>, No. 24781, <a href="http://www.nber.org/papers/w24781" class="uri">http://www.nber.org/papers/w24781</a>.</li>
+</ul>
+<h4 id="technical-1">Technical</h4>
+<ul>
+<li>Review ‘Hunt, gather and farm’ from <em>Telling Stories With Data</em>, if necessary.</li>
+</ul>
+<h3 id="week-3---women-and-gender">Week 3 - Women and gender</h3>
+<h4 id="ethical-2">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>D’Ignazio, Catherine, and Lauren F. Klein, 2020, <em>Data Feminism</em>, MIT Press.</li>
+<li>Gebru, Timnit, 2020, ‘Race and Gender’, <em>The Oxford Handbook of Ethics of AI</em>, Chapter 13, Oxford University Press.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Borgerson, Janet L., 2007, ‘On the Harmony of Feminist Ethics and Business Ethics’, <em>Business and Society Review</em>, 112 (4):477-509.<br />
+</li>
+<li>D’Ignazio, Catherine, and Lauren F. Klein, ‘Feminist data visualization’, <em>Workshop on Visualization for the Digital Humanities (VIS4DH)</em>, Baltimore. IEEE. 2016.</li>
+<li>Hill, Kashmir, 2017, ‘What Happens When You Tell the Internet You’re Pregnant’, Jezebel, 27 July, <a href="https://jezebel.com/what-happens-when-you-tell-the-internet-youre-pregnant-1794398989" class="uri">https://jezebel.com/what-happens-when-you-tell-the-internet-youre-pregnant-1794398989</a>.</li>
+<li>Keyes, Os, 2018, ‘The misgendering machines: Trans/HCI implications of automatic gender recognition’, Proceedings of the ACM on Human-Computer Interaction, 2(CSCW), 1-22, <a href="https://dl.acm.org/doi/pdf/10.1145/3274357" class="uri">https://dl.acm.org/doi/pdf/10.1145/3274357</a>.</li>
+<li>Quintin, Cooper, 2017, ‘Pregnancy Panopticon’, DEFCON 25, <a href="https://www.eff.org/files/2017/07/27/the_pregnancy_panopticon.pdf" class="uri">https://www.eff.org/files/2017/07/27/the_pregnancy_panopticon.pdf</a>.</li>
+<li>Woods, Heather Suzanne, 2018, ‘Asking more of Siri and Alexa: feminine persona in service of surveillance capitalism’, Critical Studies in Media Communication, 35.4, pp. 334-349.</li>
+</ul>
+<h4 id="technical-2">Technical</h4>
+<p>Review the essentials of Bayesian models by going through McElreath, 2020, Statistical Rethinking, 2nd Edition, (at least chapters 1, 2, 4, 7, 9, 11, 12, and 13) to address any shortcomings.</p>
+<h3 id="week-4---race">Week 4 - Race</h3>
+<p><em>Tom Davidson, Assistant Professor, Sociology, Rutgers University: <a href="https://youtu.be/YDmxMn2Doq0" class="uri">https://youtu.be/YDmxMn2Doq0</a>.</em></p>
+<h4 id="ethical-3">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Davidson, Thomas, Debasmita Bhattacharya, and Ingmar Weber, 2019, ‘Racial bias in hate speech and abusive language detection datasets’, arXiv, <a href="https://arxiv.org/abs/1905.12516" class="uri">https://arxiv.org/abs/1905.12516</a>.</li>
+<li>Noble, Safiya Umoja, 2018, <em>Algorithms of Oppression: How Search Engines Reinforce Racism</em>, NYU Press, Chapter 2.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Buolamwini, Joy and Timnit Gebru, 2018, ‘Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification’, Proceedings of Machine Learning Research Conference on Fairness, Accountability, and Transparency, 81: pp. 1–15, <a href="http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf" class="uri">http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf</a></li>
+<li>Kwet, Michael, 2019, ‘Digital colonialism: US empire and the new imperialism in the Global South’, Race &amp; Class 60.4, 3-26.</li>
+<li>Scheuerman, M. K., Wade, K., Lustig, C., and Brubaker, J. R., 2020, ‘How We’ve Taught Algorithms to See Identity: Constructing Race and Gender in Image Databases for Facial Analysis’, Proceedings of the ACM on Human-Computer Interaction, 4(CSCW1), 1-35.</li>
+<li>Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan, 2019, ‘Dissecting racial bias in an algorithm used to manage the health of populations’, Science, Vol. 366, Issue 6464, pp. 447-453, DOI: 10.1126/science.aax2342, <a href="https://science.sciencemag.org/content/366/6464/447/tab-pdf" class="uri">https://science.sciencemag.org/content/366/6464/447/tab-pdf</a></li>
+</ul>
+<h4 id="technical-3">Technical</h4>
+<ul>
+<li>Pick a project from The Markup’s Show Your Work section (<a href="https://themarkup.org/series/show-your-work" class="uri">https://themarkup.org/series/show-your-work</a>) and reproduce it, writing your own code. You may pick whatever language you are comfortable in.</li>
+</ul>
+<h3 id="week-5---natural-language-processing">Week 5 - Natural Language Processing</h3>
+<!-- *Xanda Schofield, Assistant Professor, Computer Science, Harvey Mudd College, will be invited to join the discussion briefly this week.* -->
+<h4 id="ethical-4">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Bender, Emily M., Angelina McMillan-Major, Timnit Gebru and Shmargaret Shmitchell, 2021, ‘On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?’, <a href="https://faculty.washington.edu/ebender/papers/Stochastic_Parrots.pdf" class="uri">https://faculty.washington.edu/ebender/papers/Stochastic_Parrots.pdf</a></li>
+<li>Hovy, Dirk and Shannon L. Spruit, 2016, ‘The Social Impact of Natural Language Processing’, Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, pp. 591–598, <a href="https://aclweb.org/anthology/P16-2096.pdf" class="uri">https://aclweb.org/anthology/P16-2096.pdf</a>.</li>
+<li>Prabhumoye, Shrimai, Elijah Mayfield, and Alan W Black, 2019, ‘Principled Frameworks for Evaluating Ethics in NLP Systems’, Proceedings of the 2019 Workshop on Widening NLP, <a href="https://aclweb.org/anthology/W19-3637/" class="uri">https://aclweb.org/anthology/W19-3637/</a>.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Bolukbasi, Tolga, Kai-Wei Chang, James Y. Zou, Venkatesh Saligrama and Adam T. Kalai, 2016, ‘Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings’, Advances in Neural Information Processing Systems 29 (NIPS 2016), <a href="http://papers.nips.cc/paper/6228-man-is-to-computer-programmer-as-woman-is-to-homemaker-d" class="uri">http://papers.nips.cc/paper/6228-man-is-to-computer-programmer-as-woman-is-to-homemaker-d</a>.</li>
+<li>Chang, Kai-Wei, Vinod Prabhakaran, and Vicente Ordonez, 2019, ‘Bias and Fairness in Natural Language Processing’, Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP): Tutorial Abstracts, <a href="https://aclweb.org/anthology/D19-2004/" class="uri">https://aclweb.org/anthology/D19-2004/</a>.</li>
+<li>Hutchinson, Ben, Vinodkumar Prabhakaran, Emily Denton, Kellie Webster, Yu Zhong, and Stephen Denuyl, 2020, ‘Social Biases in NLP Models as Barriers for Persons with Disabilities’, arXiv, <a href="https://arxiv.org/abs/2005.00813" class="uri">https://arxiv.org/abs/2005.00813</a>.</li>
+<li>Solaiman, Irene, Miles Brundage, Jack Clark, Amanda Askell, Ariel Herbert-Voss, Jeff Wu, Alec Radford, Gretchen Krueger, Jong Wook Kim, Sarah Kreps, Miles McCain, Alex Newhouse, Jason Blazakis, Kris McGuffie, Jasmine Wang, 2019, ‘Release Strategies and the Social Impacts of Language Models’, arXiv, <a href="https://arxiv.org/abs/1908.09203" class="uri">https://arxiv.org/abs/1908.09203</a>.</li>
+<li>Tatman, Rachel, 2020, ‘What I Won’t Build’, Widening NLP Workshop 2020, Keynote address, 5 July, <a href="https://slideslive.com/38929585/what-i-wont-build" class="uri">https://slideslive.com/38929585/what-i-wont-build</a> and <a href="http://www.rctatman.com/talks/what-i-wont-build" class="uri">http://www.rctatman.com/talks/what-i-wont-build</a>.</li>
+<li>Zhao, Jieyu, Tianlu Wang, Mark Yatskar, Vicente Ordonez and Kai-Wei Chang, 2017, ‘Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints’, Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, pp. 2979–2989, <a href="https://aclweb.org/anthology/D17-1323.pdf" class="uri">https://aclweb.org/anthology/D17-1323.pdf</a>.</li>
+<li>(Optional/fun/horrifying) Hao, Karen, 2020, ‘The messy, secretive reality behind OpenAI’s bid to save the world’, MIT Review, 17 February, <a href="https://www.technologyreview.com/2020/02/17/844721/ai-openai-moonshot-elon-musk-sam-altman-greg-brockman-messy-secretive-reality/" class="uri">https://www.technologyreview.com/2020/02/17/844721/ai-openai-moonshot-elon-musk-sam-altman-greg-brockman-messy-secretive-reality/</a>.</li>
+</ul>
+<h4 id="technical-4">Technical</h4>
+<ul>
+<li>Implement a NLP model via Hugging Face or Spacy, depending on your language preference.</li>
+</ul>
+<h3 id="week-6---ai-ethics">Week 6 - AI Ethics</h3>
+<p><em>Shion Guha, Assistant Professor, University of Toronto, will join the discussion briefly this week.</em></p>
+<h4 id="ethical-5">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Brundage, Miles, Shahar Avin, Jack Clark, Helen Toner, Peter Eckersley, Ben Garfinkel, Allan Dafoe, Paul Scharre, Thomas Zeitzoff, Bobby Filar, Hyrum Anderson, Heather Roff, Gregory C. Allen, Jacob Steinhardt, Carrick Flynn, Seán Ó hÉigeartaigh, Simon Beard, Haydn Belfield, Sebastian Farquhar, Clare Lyle, Rebecca Crootof, Owain Evans, Michael Page, Joanna Bryson, Roman Yampolskiy, Dario Amodei, 2019, ‘The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation’, arXiv, <a href="https://arxiv.org/abs/1802.07228" class="uri">https://arxiv.org/abs/1802.07228</a>.</li>
+<li>Jobin, A., Ienca, M., and Vayena, E, 2019, ‘The global landscape of AI ethics guidelines’, Nature Machine Intelligence, 1(9), pp. 389-399. <a href="https://www.nature.com/articles/s42256-019-0088-2" class="uri">https://www.nature.com/articles/s42256-019-0088-2</a>.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Australian Human Rights Commission, 2019, ‘Human Rights and Technology Discussion Paper’, December, <a href="https://tech.humanrights.gov.au/sites/default/files/2019-12/TechRights_2019_DiscussionPaper.pdf" class="uri">https://tech.humanrights.gov.au/sites/default/files/2019-12/TechRights_2019_DiscussionPaper.pdf</a>.</li>
+<li>Crawford, Kate, Amba Kak and Jason Schultz, 2020, ‘Submission to the Australian Human Rights Commission Human Rights &amp; Technology Discussion Paper’, AI Now Institute, New York University, 13 March.</li>
+<li>Kaplan, Andreas, Michael Haenlein, 2019, ‘Siri, Siri, in my hand: Who’s the fairest in the land? On the interpretations, illustrations, and implications of artificial intelligence’, Business Horizons, Volume 62, Issue 1, pp. 15-25.</li>
+<li>Leslie, David, 2019, ‘Understanding Artificial Intelligence Ethics and Safety: A guide for the responsible design and implementation of AI systems in the public sector’, Alan Turing Institute.</li>
+<li>Luciano, Floridi, and Cowls Josh, 2019, ‘A Unified Framework of Five Principles for AI in Society’, Harvard Data Science Review, 1 July, <a href="https://hdsr.mitpress.mit.edu/pub/l0jsh9d1" class="uri">https://hdsr.mitpress.mit.edu/pub/l0jsh9d1</a>.</li>
+<li>Paglioni, Vincent, 2015, ‘The Ethics of Intelligent Machines’, Investment Management Consultants Association, <a href="https://investmentsandwealth.org/getattachment/f3614756-1e1d-49c7-a201-29dbc22d8fbf/IWM15NovDec-EthicsIntelligentMachines.pdf" class="uri">https://investmentsandwealth.org/getattachment/f3614756-1e1d-49c7-a201-29dbc22d8fbf/IWM15NovDec-EthicsIntelligentMachines.pdf</a></li>
+<li>Winfield, Alan F., Katina Michael, Jeremy Pitt, Vanessa Evers, 2019, ‘Machine Ethics: the Design and Governance of Ethical AI and Autonomous Systems’, Proceeding of IEEE, Volume 107, Issue 3, pp. 509-517.</li>
+<li>Sam Corbett-Davies and Sharad Goel, 2018, ‘The Measure and Mismeasure of Fairness: A Critical Review of Fair Machine Learning’, 14 August, <a href="https://arxiv.org/pdf/1808.00023.pdf" class="uri">https://arxiv.org/pdf/1808.00023.pdf</a>.</li>
+<li>Inareh Mehrabi, Fred Morstatter, Nripsuta Saxena, Kristina Lerman, And Aram Galstyan, 2019, ‘A Survey on Bias and Fairness in Machine Learning’, <a href="https://arxiv.org/pdf/1908.09635.pdf" class="uri">https://arxiv.org/pdf/1908.09635.pdf</a>.</li>
+<li>Irene Y. Chen, Fredrik D. Johansson, David Sontag, 2018, ‘Why Is My Classifier Discriminatory?’, <a href="https://arxiv.org/pdf/1805.12002.pdf" class="uri">https://arxiv.org/pdf/1805.12002.pdf</a>.</li>
+</ul>
+<h4 id="technical-5">Technical</h4>
+<p>Use RASA (<a href="https://rasa.com/" class="uri">https://rasa.com/</a>) to build a chatbot, or OpenAI’s GPT-2 or GPT-3 to generate text.</p>
+<h3 id="week-7---privacy">Week 7 - Privacy</h3>
+<p><em>Jonathan A. Obar, Assistant Professor, Department of Communication Studies, York University, will be invited to join the discussion briefly this week.</em></p>
+<h4 id="ethical-6">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Hyunghoon Cho, Daphne Ippolito, Yun William Yu, 2020, ‘Contact Tracing Mobile Apps for COVID-19: Privacy Considerations and Related Trade-offs’, arXiv, <a href="https://arxiv.org/abs/2003.11511" class="uri">https://arxiv.org/abs/2003.11511</a>.</li>
+<li>Obar, Jonathan A. and Oeldorf-Hirsch, Anne, 2018, ‘The Biggest Lie on the Internet: Ignoring the Privacy Policies and Terms of Service Policies of Social Networking Services’ TPRC 44: The 44th Research Conference on Communication, Information and Internet Policy, <a href="http://dx.doi.org/10.2139/ssrn.2757465" class="uri">http://dx.doi.org/10.2139/ssrn.2757465</a>.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Blumberg, Andrew J. and Peter Eskersley, 2009, ‘On Locational Privacy, and How to Avoid Losing it Forever’, <a href="https://www.eff.org/wp/locational-privacy" class="uri">https://www.eff.org/wp/locational-privacy</a>.</li>
+<li>de Montjoye, Yves-Alexandre, César A. Hidalgo, Michel Verleysen, and Vincent D. Blondel, 2013, ‘Unique in the Crowd: The privacy bounds of human mobility’, Scientific Reports, vol 3, <a href="https://doi.org/10.1038/srep01376" class="uri">https://doi.org/10.1038/srep01376</a>.</li>
+<li>Obar, Jonathan A., and Anne Oeldorf-Hirsch, 2018, ‘The clickwrap: A political economic mechanism for manufacturing consent on social media’, Social Media+ Society, 4.3, 2056305118784770</li>
+<li>Solove, Daniel J, 2007, ‘“I’ve Got Nothing to Hide” and Other Misunderstandings of Privacy’, San Diego Law Review, Vol. 44, p. 745-772.</li>
+<li>Zimmeck, Sebastian, Story, Peter, Smullen, Daniel, Ravichander, Abhilasha, Wang, Ziqi, Reidenberg, Joel, Cameron Russell, N., &amp; Sadeh, Norman, 2019, ‘MAPS: Scaling Privacy Compliance Analysis to a Million Apps’, Proceedings on Privacy Enhancing Technologies, Volume 3, pp. 66-86.</li>
+<li>Zimmer, Michael, Priya Kumar, Jessica Vitak, Yuting Liao and Katie Chamberlain Kritikos, 2018, “‘There’s nothing really they can do with this information’: unpacking how users manage privacy boundaries for personal fitness information”, Information, Communication &amp; Society, Vol 23, Issue 7, pp. 1020-1037.</li>
+</ul>
+<h4 id="technical-6">Technical</h4>
+<ul>
+<li>Find or generate a dataset, then implement differential privacy on it. Examine and discuss the results.</li>
+<li>Oberski, Daniel, and Frauke Kreuter, 2020, ‘Differential Privacy and Social Science: An Urgent Puzzle’, Harvard Data Science Review, <a href="https://doi.org/10.1162/99608f92.63a22079" class="uri">https://doi.org/10.1162/99608f92.63a22079</a>.</li>
+<li>Rubinstein, Benjamin I. P. and Francesco Alda, 2017, ‘diffpriv: An R Package for Easy Differential Privacy’, Journal of Machine Learning Research, 18, pp. 1-5.</li>
+</ul>
+<h3 id="week-8---imagesvideo-with-particular-reference-to-facial-recognition">Week 8 - Images/video with particular reference to facial recognition</h3>
+<p><em>Jeffrey Knockel, Research Associate, Citizen Lab, University of Toronto, will be invited to join the discussion briefly this week.</em></p>
+<h4 id="ethical-7">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Buolamwini, Joy, Vicente Ordóñez, Jamie Morgenstern, and Learned-Miller, Erik, 2020, ‘Facial recognition technologies: A primer’, Algorithmic Justice League, 29 May.</li>
+<li>Inioluwa Deborah Raji, Timnit Gebru, Margaret Mitchell, Joy Buolamwini, Joonseok Lee, and Emily Denton, 2020, ‘Saving Face: Investigating the Ethical Concerns of Facial Recognition Auditing’, In Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society (AIES ’20). Association for Computing Machinery, New York, NY, USA, 145–151. <a href="DOI:https://doi.org/10.1145/3375627.3375820" class="uri">DOI:https://doi.org/10.1145/3375627.3375820</a>.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Hill, Kashmir, 2020, ‘Wrongfully Accused by an Algorithm’, New York Times, 24 June, <a href="https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html" class="uri">https://www.nytimes.com/2020/06/24/technology/facial-recognition-arrest.html</a>.</li>
+<li>Hill, Kashmir, 2020, ‘The Secretive Company That Might End Privacy as We Know It’, New York Times, 18 January, <a href="https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html" class="uri">https://www.nytimes.com/2020/01/18/technology/clearview-privacy-facial-recognition.html</a>.</li>
+<li>Knockel, Jeffrey, and Ruohan Xiong, 2019, ‘(Can’t) Picture This 2: An Analysis of WeChat’s Realtime Image Filtering in Chats’, Citizen Lab, 15 July, <a href="https://citizenlab.ca/2019/07/cant-picture-this-2-an-analysis-of-wechats-realtime-image-filtering-in-chats/" class="uri">https://citizenlab.ca/2019/07/cant-picture-this-2-an-analysis-of-wechats-realtime-image-filtering-in-chats/</a>.</li>
+<li>Learned-Miller, Erik, Vicente Ordóñez, Jamie Morgenstern, and Joy Buolamwini, 2020, ‘Facial recognition technologies in the wild: A call for a federal office’, Algorithmic Justice League, 29 May,</li>
+</ul>
+<h4 id="technical-7">Technical</h4>
+<ul>
+<li>Chollet, Francois, and J. J. Allaire, 2018, Deep Learning with R, Chapter 5 ‘Deep learning for computer vision’.</li>
+</ul>
+<h3 id="week-9---corporate-surveillance">Week 9 - Corporate Surveillance</h3>
+<h4 id="ethical-8">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Zuboff, Shoshana, 2019, The Age of Surveillance Capitalism, and watch related interview: <a href="https://www.youtube.com/watch?v=hIXhnWUmMvw" class="uri">https://www.youtube.com/watch?v=hIXhnWUmMvw</a></li>
+<li>Zuboff, Shoshana, 2019, ‘Written Testimony Submitted to The International Grand Committee on Big Data, Privacy, and Democracy’, 28 May, Ottawa, <a href="https://www.ourcommons.ca/Content/Committee/421/ETHI/Brief/BR10573725/br-external/ZuboffShoshana-e.pdf" class="uri">https://www.ourcommons.ca/Content/Committee/421/ETHI/Brief/BR10573725/br-external/ZuboffShoshana-e.pdf</a> and watch related video <a href="https://youtu.be/6N2kJNwGgUg?t=4869" class="uri">https://youtu.be/6N2kJNwGgUg?t=4869</a>.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Bennett Cyphers and Gennie Gebhart, “Behind One-Way Mirror: A Deep Dive Into the Technology of Corporate Surveillance”, <a href="https://www.eff.org/files/2019/12/11/behind_the_one-way_mirror-a_deep_dive_into_the_technology_of_corporate_surveillance.pdf" class="uri">https://www.eff.org/files/2019/12/11/behind_the_one-way_mirror-a_deep_dive_into_the_technology_of_corporate_surveillance.pdf</a></li>
+<li>Marczak, Bill and John Scott-Railton, 2020, ‘Move Fast and Roll Your Own Crypto: A Quick Look at the Confidentiality of Zoom Meetings’, Citizen Lab, 3 April, <a href="https://citizenlab.ca/2020/04/move-fast-roll-your-own-crypto-a-quick-look-at-the-confidentiality-of-zoom-meetings/" class="uri">https://citizenlab.ca/2020/04/move-fast-roll-your-own-crypto-a-quick-look-at-the-confidentiality-of-zoom-meetings/</a>.</li>
+<li>Parsons, Christopher, Andrew Hilts, and Masashi Crete-Nishihata, 2017, ‘Approaching Access: A comparative analysis of company responses to data access requests in Canada’, Citizen Lab, Research Brief No. 106. Available at: <a href="https://citizenlab.ca/wp-content/uploads/2018/02/approaching_access.pdf" class="uri">https://citizenlab.ca/wp-content/uploads/2018/02/approaching_access.pdf</a>.</li>
+<li>(Optional/fun) Duhigg, Charles, 2012, ‘How Companies Learn Your Secrets’, New York Times, 19 February, <a href="https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html" class="uri">https://www.nytimes.com/2012/02/19/magazine/shopping-habits.html</a></li>
+</ul>
+<h4 id="technical-8">Technical</h4>
+<ul>
+<li>Create a datasheet or model card for an open source dataset or model.</li>
+<li>Gebru, Timnit, Jamie Morgenstern, Briana Vecchione, Jennifer Wortman Vaughan, Hanna Wallach, Hal Daumé III, and Kate Crawford, 2018, ‘Datasheets for Datasets’, arXiv, <a href="https://arxiv.org/abs/1803.09010" class="uri">https://arxiv.org/abs/1803.09010</a></li>
+<li>Mitchell, Margaret, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji and Timnit Gebru, 2019, ‘Model Cards for Model Reporting’, FAT ’19: Proceedings of the Conference on Fairness, Accountability, and Transparency, pp. 220–229 <a href="https://doi.org/10.1145/3287560.3287596" class="uri">https://doi.org/10.1145/3287560.3287596</a>.</li>
+</ul>
+<h3 id="week-10---privacy-and-surveillance-in-canada-and-other-countries">Week 10 - Privacy and surveillance in Canada and other countries</h3>
+<p><em>Lisa Austin, Professor, Law, University of Toronto, will be invited to join the discussion briefly this week.</em></p>
+<h4 id="ethical-9">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Khoo, Cynthia, Kate Robertson, and Ronald Deibert, 2019, ‘Installing Fear: A Canadian Legal and Policy Analysis of Using, Developing, and Selling Smartphone Spyware and Stalkerware Applications,’ Citizen Lab, Research Report No. 120, University of Toronto, June, <a href="https://tspace.library.utoronto.ca/bitstream/1807/96321/1/stalkerware-legal.pdf" class="uri">https://tspace.library.utoronto.ca/bitstream/1807/96321/1/stalkerware-legal.pdf</a>.</li>
+<li>Obar, Jonathan A., 2017, ‘Keeping Internet Users in the Know or in the Dark? The Data Privacy Transparency of Canadian Internet Carriers: A Third Report’, IXMaps, <a href="https://ixmaps.ca/docs/DataPrivacyTransparencyCanadianCarriers-2017.pdf" class="uri">https://ixmaps.ca/docs/DataPrivacyTransparencyCanadianCarriers-2017.pdf</a></li>
+<li>Ruan, Lotus, Crete-Nishihata, Masashi, Knockel, Jeffrey, Xiong, Ruohan and Dalek, Jakub, 2020, ‘The Intermingling of State and Private Companies: Analysing Censorship of the 19th National Communist Party Congress on WeChat,’ The China Quarterly, pp. 1–30. doi: 10.1017/S0305741020000491.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>Austin, Lisa, and David Lie, 2019, ‘Safe Sharing Sites’, New York University Law Review, Vol. 94, No. 4, pp. 581 - 623.</li>
+<li>Knockel, Jeffrey, Christopher Parsons, Lotus Ruan, Ruohan Xiong, Jedidiah Crandall, and Ron Deibert, 2020, ‘We Chat, They Watch: How International Users Unwittingly Build up WeChat’s Chinese Censorship Apparatus,’ Citizen Lab, Research Report No. 127, University of Toronto, May, <a href="https://tspace.library.utoronto.ca/bitstream/1807/101395/1/Report%23127--wechattheywatch-web.pdf" class="uri">https://tspace.library.utoronto.ca/bitstream/1807/101395/1/Report%23127--wechattheywatch-web.pdf</a>.</li>
+<li>Obar, Jonathan A., and Brenda McPhail, 2018, ‘Preventing Big Data Discrimination in Canada: Addressing design, consent and sovereignty challenges’, Centre for International Governance Innovation (CIGI), <a href="https://www.cigionline.org/articles/preventing-big-data-discrimination-canada-addressing-design-consent-and-sovereignty" class="uri">https://www.cigionline.org/articles/preventing-big-data-discrimination-canada-addressing-design-consent-and-sovereignty</a>.</li>
+<li>Parsons, Christopher, Adam Molnar, Jakub Dalek, Jeffrey Knockel, Miles Kenyon, Bennett Haselton, Cynthia Khoo, and Ron Deibert, 2019, ‘The Predator in Your Pocket: A Multidisciplinary Assessment of the Stalkerware Application Industry,’ Citizen Lab, Research Report, No. 119, University of Toronto, June, <a href="https://tspace.library.utoronto.ca/bitstream/1807/96320/1/stalkerware-holistic.pdf" class="uri">https://tspace.library.utoronto.ca/bitstream/1807/96320/1/stalkerware-holistic.pdf</a>.</li>
+<li>Scott, James C., 1998, Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed.</li>
+<li>Various, ‘GDPR Checklist’, <a href="https://gdpr.eu/checklist/" class="uri">https://gdpr.eu/checklist/</a>.</li>
+<li>Various, ‘Summary of privacy laws in Canada’, Office of the Privacy Commissioner, <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/02_05_d_15/" class="uri">https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/02_05_d_15/</a>.</li>
+</ul>
+<h4 id="technical-9">Technical</h4>
+<ul>
+<li>TBD based on student interest.</li>
+</ul>
+<h3 id="week-11---algorithmic-decision-making">Week 11 - Algorithmic decision-making</h3>
+<p><em>Jamie Duncan, Junior Policy Analyst, Artificial Intelligence Hub, Innovation, Science and Economic Development Canada, will be invited to join the discussion briefly this week.</em></p>
+<h4 id="ethical-10">Ethical</h4>
+<p>Core:</p>
+<ul>
+<li>Spiegelhalter, David, 2020, ‘Should We Trust Algorithms?’, Harvard Data Science Review, 31 January, <a href="https://doi.org/10.1162/99608f92.cb91a35a" class="uri">https://doi.org/10.1162/99608f92.cb91a35a</a>.</li>
+<li>Molnar, Petra and Lex Gill, 2018, ‘Bots at the Gate: A Human Rights Analysis of Automated Decision-Making in Canada’s Immigration and Refugee System,’ Citizen Lab and International Human Rights Program, Faculty of Law, University of Toronto, Research Report No. 114, University of Toronto, September, <a href="https://citizenlab.ca/wp-content/uploads/2018/09/IHRP-Automated-Systems-Report-Web-V2.pdf" class="uri">https://citizenlab.ca/wp-content/uploads/2018/09/IHRP-Automated-Systems-Report-Web-V2.pdf</a>.</li>
+</ul>
+<p>Additional (pick two):</p>
+<ul>
+<li>De-Arteaga, Maria, Riccardo Fogliato, and Alexandra Chouldechova, ‘A Case for Humans-in-the-Loop: Decisions in the Presence of Erroneous Algorithmic Scores’. <a href="https://arxiv.org/abs/2002.08035" class="uri">https://arxiv.org/abs/2002.08035</a>.</li>
+<li>Mitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum, 2018, ‘Prediction-Based Decisions and Fairness: A Catalogue of Choices, Assumptions, and Definitions’, arXiv, 1811.07867. <a href="https://arxiv.org/abs/1811.07867" class="uri">https://arxiv.org/abs/1811.07867</a>.</li>
+<li>Rudin, Cynthia, Caroline Wang, and Beau Coker, ‘The Age of Secrecy and Unfairness in Recidivism Prediction’, Harvard Data Science Review, <a href="https://hdsr.mitpress.mit.edu/pub/7z10o269" class="uri">https://hdsr.mitpress.mit.edu/pub/7z10o269</a>.</li>
+<li>Suresh, Harini, Natalie Lao, and Ilaria Liccardi, ‘Misplaced Trust: Measuring the Interference of Machine Learning in Human Decision-Making’, <a href="https://arxiv.org/pdf/2005.10960.pdf" class="uri">https://arxiv.org/pdf/2005.10960.pdf</a></li>
+<li>The Joint Council for the Welfare of Immigrants v Secretary of State for the Home Department, 2020, ‘Grounds of Challenge’ and ‘Response’, available: <a href="https://www.foxglove.org.uk/news/c6tv7i7om2jze5pxs409k3oo3dyel0" class="uri">https://www.foxglove.org.uk/news/c6tv7i7om2jze5pxs409k3oo3dyel0</a> and background here: <a href="https://www.theguardian.com/uk-news/2020/aug/04/home-office-to-scrap-racist-algorithm-for-uk-visa-applicants" class="uri">https://www.theguardian.com/uk-news/2020/aug/04/home-office-to-scrap-racist-algorithm-for-uk-visa-applicants</a>.</li>
+</ul>
+<h4 id="technical-10">Technical</h4>
+<ul>
+<li>McElreath says that researchers use point estimates to describe posterior distributions, not to support particular decisions. But this isn’t always viable. Using a post from the Stan Case Study (<a href="https://mc-stan.org/users/documentation/case-studies.html" class="uri">https://mc-stan.org/users/documentation/case-studies.html</a>) as a guide, please develop a Bayesian hierarchical model in Stan. Please post-process your model to support/recommend a decision, and justify your choices.</li>
+</ul>
+<h3 id="week-12---history-of-ethical-concerns-broadly-and-domain-specific-ethical-practices">Week 12 - History of ethical concerns broadly, and domain-specific ethical practices</h3>
+<h4 id="ethical-please-pick-two-areas.">Ethical (Please pick two areas.)</h4>
+<p>Medicine:</p>
+<ul>
+<li>Parker, Michael, J A Muir Gray, 2001, ‘What is the role of clinical ethics support in the era of e-medicine?’, Journal of Medical Ethics, 27 suppl I:i33–i35 <a href="https://jme.bmj.com/content/medethics/27/suppl_1/i33.full.pdf" class="uri">https://jme.bmj.com/content/medethics/27/suppl_1/i33.full.pdf</a></li>
+<li>Chancellor, S., Baumer, E. P., &amp; De Choudhury, M. (2019). Who is the” Human” in Human-Centered Machine Learning: The Case of Predicting Mental Health from Social Media. Proceedings of the ACM on Human-Computer Interaction, 3(CSCW), 1-32. <a href="https://doi.org/10.1145/3359249" class="uri">https://doi.org/10.1145/3359249</a></li>
+<li>Vayena, Effy, and Alessandro Blasimme, 2020, ‘The Ethics of AI in Biomedical Research, Medicine and Public Health’, The Oxford Handbook of Ethics of AI, Chapter 37, Oxford University Press.</li>
+</ul>
+<p>Engineering:</p>
+<ul>
+<li>Davis, Michael, 1991, ‘Thinking Like an Engineer: The Place of a Code of Ethics in the Practice of a Profession’, <a href="https://www.jstor.org/stable/pdf/2265293.pdf?refreqid=excelsior%3A94aaba1458bc97cf0563cf7d16861188" class="uri">https://www.jstor.org/stable/pdf/2265293.pdf?refreqid=excelsior%3A94aaba1458bc97cf0563cf7d16861188</a></li>
+<li>Michaelson, Christopher, 2014, ‘The Competition for the Tallest Skyscraper: Implications for Global Ethics and Economics’, CTBUH Journal, Issue IV, <a href="https://www.jstor.org/stable/pdf/24192831.pdf?ab_segments=0%252Fbasic_SYC-5187%252Ftest&amp;refreqid=excelsior%3A9bf439c8785e93d009d8e42608e6b425" class="uri">https://www.jstor.org/stable/pdf/24192831.pdf?ab_segments=0%252Fbasic_SYC-5187%252Ftest&amp;refreqid=excelsior%3A9bf439c8785e93d009d8e42608e6b425</a></li>
+<li>Millar, Jason, 2020, ‘Engineering’, The Oxford Handbook of Ethics of AI, Chapter 23, Oxford University Press.</li>
+</ul>
+<p>Statistics:</p>
+<ul>
+<li>Wells, Martin, 2020, ‘Statistics’, The Oxford Handbook of Ethics of AI, Chapter 26, Oxford University Press.</li>
+</ul>
+<p>Law:</p>
+<ul>
+<li>Angwin, Julia, Jeff Larson, Surya Mattu and Lauren Kirchner, 2016, ‘Machine Bias’, ProPublica, <a href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing" class="uri">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing</a></li>
+<li>Eubanks, Virginia, 2014, ‘How Big Data Could Undo Our Civil-Rights Law’, <a href="https://prospect.org/justice/big-data-undo-civil-rights-laws/" class="uri">https://prospect.org/justice/big-data-undo-civil-rights-laws/</a></li>
+<li>Surden, Harry, 2020, ‘Law: Basic Questions’, The Oxford Handbook of Ethics of AI, Chapter 38, Oxford University Press.</li>
+</ul>
+<p>Finances:</p>
+<ul>
+<li>Geslevich Packin, Nizan, Yafit Lev Aretz, 2015, ‘Big Data and Social Netbanks: Are You Ready to Replace Your Bank?’, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2567135" class="uri">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2567135</a></li>
+</ul>
+<p>Education:</p>
+<ul>
+<li>Mayfield, E., Madaio, M., Prabhumoye, S., Gerritsen, D., McLaughlin, B., Dixon-Román, E., &amp; Black, A. W. (2019, August). Equity beyond bias in language technologies for education. In Proceedings of the Fourteenth Workshop on Innovative Use of NLP for Building Educational Applications (pp. 444-460). <a href="https://doi.org/10.1177/2053951720913064" class="uri">https://doi.org/10.1177/2053951720913064</a></li>
+<li>Rubel, A., &amp; Jones, K. M. (2016). Student privacy in learning analytics: An information ethics perspective. The information society, 32(2), 143-159. <a href="https://doi.org/10.1080/01972243.2016.1130502" class="uri">https://doi.org/10.1080/01972243.2016.1130502</a></li>
+<li>Zeide, Elana, 2020, ‘Education’, The Oxford Handbook of Ethics of AI, Chapter 42, Oxford University Press.</li>
+</ul>
+<p>General non-computational:</p>
+<ul>
+<li>Selbst, A. D., Boyd, D., Friedler, S. A., Venkatasubramanian, S., &amp; Vertesi, J. (2019, January). Fairness and abstraction in sociotechnical systems. In Proceedings of the Conference on Fairness, Accountability, and Transparency (pp. 59-68). <a href="https://dl.acm.org/doi/pdf/10.1145/3287560.3287598" class="uri">https://dl.acm.org/doi/pdf/10.1145/3287560.3287598</a></li>
+<li>Earlier calls for ethics in computing</li>
+<li>Agre, Philip E., 1997, ‘Towards a critical technical practice: Lessons learned from trying to reform AI’, Social science, technical systems, and cooperative work: Beyond the great divide, Ed. by Geoffrey C. Bowker, Susan Leigh Star, Will Turner, and Les Gasser. Mahwah, NJ: Lawrence Erlbaum Associates, pp. 131–158. URL: <a href="https://web.archive.org/web/20040203070641/http://polaris.gseis.ucla.edu/pagre/critical.html" class="uri">https://web.archive.org/web/20040203070641/http://polaris.gseis.ucla.edu/pagre/critical.html</a>.</li>
+<li>Friedman, Batya, and Helen Nissenbaum, 1996, ‘Bias in computer systems’, ACM Trans. Inf. Syst, 14, 3 (July 1996), 330–347. DOI: <a href="https://doi.org/10.1145/230538.230561" class="uri">https://doi.org/10.1145/230538.230561</a>.</li>
+</ul>
+<h4 id="technical-11">Technical</h4>
+<ul>
+<li>TBD based on student interest.</li>
+</ul>
+<h2 id="assessment">Assessment</h2>
+<h3 id="four-ethical-and-technical-blog-posts-30-per-cent">Four ethical and technical blog posts (30 per cent)</h3>
+<p>Over the course of the term, you are expected to submit four blog posts that each comprise two aspects: 1) ethical and 2) technical. These two aspects should be related to each other. You must submit all four, but only your best three blog posts will count, that is each blog post will account for 10 per cent of your overall mark.</p>
+<p>For the first aspect (ethical), you are expected to write a moderate length discussion (think a paper of about two to three pages), of a reading, or set of readings, that we have covered over the past two weeks. Strong submissions will not limit themselves to reviewing a reading but will draw in larger issues and detail their own point of view.</p>
+<p>For the second aspect (technical), you are expected to implement some small related technical aspect of what we have covered in the past two weeks. For instance, if we covered natural language processing then you may critically review a paper, and put together a chat bot.</p>
+<p>To be clear, these two aspects should be related, tied together, and should be in the one blog post.</p>
+<p>You should submit your blog post by emailing me a link to the relevant blog post on your website.</p>
+<p>The proposed specific list of deadlines is:</p>
+<ul>
+<li>Blog post 1: midnight, Sunday 24 January, 2021.</li>
+<li>Blog post 2: midnight, Sunday 7 February, 2021.</li>
+<li>Blog post 3: midnight, Sunday 7 March, 2021.</li>
+<li>Blog post 4: midnight, Sunday 21 March, 2021.</li>
+</ul>
+<p>In Week 1 we will discuss how these dates fit in with your other commitments and finalise them at that point.</p>
+<p>The instructor will make the marking guide available at least a week before the submission deadline.</p>
+<h3 id="paper-1-30-per-cent">Paper 1 (30 per cent)</h3>
+<h4 id="task">Task</h4>
+<p>Please gather and clean data on UofT salaries from the Sunshine List. Then conduct a Bayesian statistical analysis of your dataset to discuss the extent to which gender has an effect on salary. Finally please prepare a paper of around 10 pages that discusses your analysis. (Hint: gender is not explicitly part of the Sunshine List, you will need to grapple with what to do.)</p>
+<h4 id="background">Background</h4>
+<p>You should make appropriate use of appendices for additional and supporting material, and thoroughly reference your paper, but neither the appendices nor the reference list count toward your page limit. Your paper should have an appropriate title, author, date, abstract, and introduction. It should document and overview your dataset. It should clearly specify your model, and then discuss the results of your analysis and any weaknesses. Your analysis should be fully reproducible, with code and data hosted on a public GitHub repo. Additionally, you should include a thorough discussion of ethical considerations relevant to your analysis. This would likely take at least three pages, but you are welcome to write as much as is needed to make the points you would like to make. Likely the best way to do this is to include a brief overview of the ethical points that you would like to discuss, and then include the rest of the discussion in an appendix. I understand that Bayesian analysis may be new to you. I will assist you with putting together the model, but it is up to you to understand and interpret the output.</p>
+<h4 id="submission">Submission</h4>
+<p>To submit your paper you should email me a link to a public GitHub repo. That repo should contain your paper in PDF format and all supporting code and data. Please send this email by midnight, Sunday, 14 February, 2021. Please do not make any changes to the repo after this. I will make the marking guide available at least a week before the submission deadline.</p>
+<h3 id="paper-2-40-per-cent">Paper 2 (40 per cent)</h3>
+<h4 id="task-1">Task</h4>
+<p>In consultation with me, please identify an appropriate research question and data source that, like the requirement for Paper 1, combines both ethical and technical aspects. Please prepare a paper that represents your best attempt to answer this question and shows off your ability to engage in thoughtful, ethical, critique. The paper should be as long as necessary, although all extraneous material should be included in appendices. The expectation is that this paper should make an original contribution, that could be published in an academic journal.</p>
+<h4 id="background-1">Background</h4>
+<p>Please see the background provided for Paper 1, as this applies for Paper 2 as well.</p>
+<h4 id="submission-1">Submission</h4>
+<p>You must send the email with the GitHub link to me by midnight, Sunday, 23 April, 2020. Please do not make any changes to the repo after this. I will make the marking guide available at least a week before the submission deadline. No extensions are possible because of deadlines for instructors to submit grades.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>

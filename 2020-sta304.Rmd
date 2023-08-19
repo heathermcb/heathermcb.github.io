@@ -1,0 +1,320 @@
+---
+title: "Surveys, Sampling, and Observational Data"
+description: |
+  STA304 is an upper-level undergraduate course at the University of Toronto's Department of Statistical Sciences.
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+## Preamble
+
+<!-- ### Syllabus -->
+
+<!-- **TBA** -->
+
+
+### Overview
+
+>The best thing about being a statistician, is that you get to play in everyone's backyard.
+>
+>John Tukey
+
+The work of applied statisticians, regardless of their specific job title and area of application, is the most important and exciting work in the world right now. The ability to gather data, analyse it, and communicate your understanding of the underlying process is incredibly valuable. In this course you will learn and apply the essentials of this.
+
+We focus on surveys, sampling and observational data. The very stuff of statistical science! We will approach these topics from a practical perspective. You will actually run surveys and learn how messy it is to put one together. You will learn how to think about sampling, how to implement it, and why the details matter. You will forecast an election. And you will conduct original research. More generally, you will learn how to obtain and analyse data and use it to make sensible claims about the world.
+
+To work as an applied statistician requires you to be able to, as part of a small team:
+
+- Gather data in less-than-perfect settings.
+- Efficiently prepare and clean data toward some purpose.
+- Analyse it in a reproducible, thorough, modern, and statistically-mature manner.
+- Communicate your analysis to stakeholders including colleagues and clients with and without formal statistical training.
+
+You likely have some of these skills already. This course will further develop them. At the end of the course you will have a portfolio of work focused on surveying, sampling, and observational data, that you could show off to a potential employer. 
+
+Each week you will read relevant papers and books, engage with them through discussion with each other, myself, and the TA. You will bring this all together and show off how much you have learnt through practical, on-going, assessment.
+
+It is important to recognise that putting together everything that you have learnt to this point in this way will be difficult. It is not possible to cover everything that you will need to know. You should proactively identify and address aspects where you are weak through seeking additional information and resources. This course acts as a guide as to what is important, it does not contain everything that is important.
+
+This course is different to many other courses at the University of Toronto. At the end of this course, you will have a portfolio of work that you could show off to a potential employer. You will have developed the skills to work successfully as an applied statistician or data scientist. And you will know how to fill gaps in your knowledge yourself. A lot of scholarships and jobs these days ask for GitHub and blog links etc to show off a portfolio of your work. This is the class that gives you a chance to develop these. It's very important to having something to show that needs to go beyond what is done in a normal class.
+
+
+
+### How to succeed
+
+In this course you will work in a self-directed, open-ended manner. Identify relevant areas of interest and then learn the skills that you need to explore those areas. 
+
+To successfully complete this course, you should expect to spend a large portion of your time reading and writing (both code and text). Deeply engage with the materials. Find a small study group and keep each other motivated and focused. At the start of the week, read the course notes, all compulsory materials and some recommended materials based on your interest. After doing that, but before the 'lecture' time you should complete the weekly quiz. During 'lectures' I'll live-code, discuss materials in the course notes, talk about an experiment, and you'll have a chance to discuss the materials with me. 
+
+You need to be more active in your learning in this course than others - read the notes and related materials - and then go out there and teach yourself more and apply it. You will not be spoon-fed in this course. Each week try to write reproducible, understandable, R code surrounded by beautifully crafted text that motivates, backgrounds, explains, discusses and criticizes. Make steady progress toward the assessment.
+
+This is not a 'bird course'. Typically, after the term is finished, students say that the course is difficult but rewarding. The TAs and I are always available to answer any questions. Please come to office hours!
+
+
+### How we'll work
+
+This webpage will provide almost all the guiding materials that you need and links to the relevant parts of the notes. The course notes are available here: https://www.tellingstorieswithdata.com. Those contain notes and other material that you could go over. There is a course Slack for discussion. We'll use Quercus really only for assessment submission and grading. I expect you to work professionally, and so we'll try to use professional tools to the extent possible. 
+
+A rough weekly flow for the course would be something like:
+
+1. Read the week's course notes.
+2. Read/watch/listen to the compulsory materials.
+3. Complete the weekly quiz.
+4. Attend the lecture.
+5. Attend the lab.
+6. Make progress on a paper.
+
+
+
+### Advice from past students
+
+Successful past students have the following advice (completely unedited by me):
+
+- "Start reading and writing on a weekly basis, watch some videos on R and RMD but more importantly learn how to use Google."
+- "It is not a wise idea to take this course if you did not take any other STA 300 level course before."
+- "Start early, find a group of people you trust enough to divide the work up fairly. Let people work to their strengths (people who know R should do the modelling, good writers should write most of the reports, etc.)"
+- "Not to worry if you don't do well on the first problem set—the nature of the course is to build up skills overtime, and it's meant to be challenging in the beginning. In the end, it is worth it because you learn very valuable applicable skills on how to write professional reports."
+- "Work on your writing and direction following skills."
+- "Look at the rubric. There were times that I lost marks because I didn't follow the rubric properly. Go to office hours, they are very useful as you can ask your own question and also get answers to questions other people ask and you didn't think of. Also, do the assignments to the best of your ability. You will lose marks if you don't put in effort and the only person you're hurting is yourself."
+- "During lectures, focus more on the why the prof is doing what he's doing. When he runs certain commands in R, figure out why that sequence of code gives what you want, because it'll help adapt his code into your assignment code. just remembering what he's doing in lecture becomes useless really quickly since the thought process matters more. also, start everything early. "
+- "Do this course when you really want to learn something and have a lot of time to working on it."
+- "you need to be very skillful in RStudio and latex. Otherwise you would be struggling."
+- "Try to incorporate the feedback given and read a looottttttttt. Also start early on the problem sets because they tend to take a lot of time. Don't give up!"
+- "-Find a good group for problem sets"
+- "If the assignments stay the same, I would tell students to approach this class from the perspective of 'storytelling with statistics' rather than a statistics course. You need to use R, and Markdown, and have a solid understanding of concepts like regression and sampling, but more importantly you need to be able to interpret results and write about them in a way coherent and professional way."
+- "do your readings"
+- "Definitely get ready to write reports"
+- "Do not take sta304 with Prof Rohan, it is pretty tough"
+- "Start your work a bit earlier, make sure to follow the format expected and the rubric exactly."
+- "Read course material. Figure out WHY this paper/video is being shown to you and what you generally learn from it. Surround yourself with people dedicated to putting in the effort to understand material and who are thorough in their work so you can discuss content and/or work together. "
+- "1. Be prepared to work extremely hard (8-11 hours a week). 2. Learn RStudio before course begins--STA130 is ideal preparation. 3. Start problem sets as soon as they are released."
+- "learn to code early and extensively use the office hours with the prof."
+- "This course requires lots of time dedicated and is not an "easy bird course" but is an incredibly rewarding course if one wants to learn how statistics is applied in the real world."
+
+
+### Acknowledgements
+
+Thank you to the following people for generously providing comments, references, suggestions, and thoughts that directly contributed to this outline: Bethany White, Dan Simpson, Jesse Gronsbell, Kelly Lyons, Lauren Kennedy, and Monica Alexander. Thank you especially to Samantha-Jo Caetano who influenced all aspects of this and co-taught the first version in Fall 2020. 
+
+
+## Content
+
+Each week you should go through the course notes and all compulsory materials. During the lecture I will live-code various aspects. I will also discuss a case study, typically a paper. During the lab, a TA will either lead small group discussions or similarly lead other work. The lecture will be recorded and posted here, but again, it's not enough to just watch that - you need to read and write yourself.
+
+
+### Week 1
+
+'Drinking from a fire hose'.
+
+- Content: [Drinking from a fire hose](https://www.tellingstorieswithdata.com/drinking-from-a-fire-hose.html), [R Essentials](https://www.tellingstorieswithdata.com/r-essentials.html).
+- Case Study: [Fisher's Lady Tasting Tea](https://www.tellingstorieswithdata.com/hunting-data.html#case-study---fishers-tea-party).
+- Lab: Go through first four modules of DoSS Toolkit and discuss any issues with the TA.
+
+
+### Week 2
+
+'Science-ing'.
+
+- Content: [Workflow](https://www.tellingstorieswithdata.com/workflow.html), [Static communication](https://www.tellingstorieswithdata.com/static-communication.html).
+- Case Study: [Tuskegee Syphilis Study](https://www.tellingstorieswithdata.com/hunting-data.html#case-study---tuskegee-syphilis-study).
+- Lab: Go through modules five to eight of DoSS Toolkit and discuss any issues with the TA.
+
+
+### Week 3
+
+'Why, if ever I did fall off---which there's no chance of---but if I did--'.
+
+- Content: [Experiments, and treatment effects](https://www.tellingstorieswithdata.com/hunting-data.html#experiments-and-randomised-controlled-trials).
+- Case Study: [The Oregon Health Insurance Experiment in the United States](https://www.tellingstorieswithdata.com/hunting-data.html#case-study---the-oregon-health-insurance-experiment).
+- Special guest: [Greg Wilson on how to run a meeting](https://youtu.be/qYh6Nzv3RWs).
+- Lab: 
+  - Please pretend that you work as a junior analyst for a large consulting firm. Further, pretend that your consulting firm has taken a contract to put together a facial recognition model for the Canada Border Services Agency's Inland Enforcement branch. Write five or six points with regard to your thoughts on this matter. What would you do and why? Then split into small groups and compare your points with others. Do you think the model would end up being implemented?
+  - With the help of the TA, please conduct 'face-to-face' surveys (via Zoom). For this exercise, you will be randomly split into groups of two. You have two minutes in each group and will then be swapped to another group. One person is to survey the other person asking the following questions: i) 'What is your gender?', ii) 'What is your age?', iii) 'What is your marital status?', iv) 'What is your income?', v) 'If an election were held today who would you vote for?'. After one person is done, then switch roles. When you are the questioner you should record all responses using a small CSV (but not the person's name please). When you are the respondent you are welcome to not respond. You will cycle through this multiple times. At the end, please write a small reflection about: 1) as a respondent, how you felt answering these questions and the implications that you think this feeling may have for how survey questions are answered more generally; and 2) as a questioner, how difficult it was to code responses and the implications this may have for the dataset that we analyse.
+
+
+### Week 4
+
+'Stratified, systematic, and cluster sampling'
+
+- Content: [Stratified, systematic, and cluster sampling]()
+- Lab: 
+- Following the guidance of the TA, please read about the Canadian General Social Survey: https://www150.statcan.gc.ca/n1/pub/89f0115x/89f0115x2019001-eng.htm and then: 
+  - Discuss its key features, strengths, and weaknesses generally. 
+    - Look at the questionnaire - what is good and bad about it? 
+    - How do they find people to take the survey? 
+    - What do they do about non-response? 
+  - Following the guidance of the TA, please identify a GSS dataset that you are interested in and then:
+    - Look at a specific question that is asked.
+    - Simulate the responses that you expect. 
+    - Download the dataset. 
+    - Conduct some exploratory data analysis.
+    - Discuss how your expectations compare with reality.
+
+
+### Week 5
+
+'Gathering data'.
+
+- Content: [Gathering data](https://www.tellingstorieswithdata.com/gather-data.html).
+- Case Study: [Student Coaching: How Far Can Technology Go?](https://www.tellingstorieswithdata.com/hunt-data.html#case-study---student-coaching-how-far-can-technology-go)
+- Lab: 
+  - Please pretend you work for Netflix and you want to know more about why people subscribe (or don't!) when prices change. Please design an experiment, discuss its key features and how you would implement it. Please pay special attention to sampling issues. Then simulate an outcome.
+  - Following the guidance of the TA, please scrape some data and discuss some ethical considerations around the dataset that you created. You may like to write a short blog post discussing the difference between data being public but scattered, and a consolidated dataset being public with reference to Kirkegaard and Bjerrekær, 2016, and Politou, Alepis, and Patsakis, 2018 (if you do that please do email a link to me out of interest).
+  
+  
+### Week 6
+
+'Whoops, I forgot EDA'.
+
+- Content: [Exploratory Data Analysis](https://www.tellingstorieswithdata.com/exploratory-data-analysis.html).
+- Case Study: [Civic honesty around the globe](https://www.tellingstorieswithdata.com/hunt-data.html#case-study---civic-honesty-around-the-globe)
+- Lab: 
+  - Pretend that you work for Loblaws as a data scientist and it is late March 2020. As part of normal monitoring, you have noticed that purchases of flour and pasta have increased substantially. You had been planning to increase the price of these items in April as part of a trial, but now your manager is not sure whether it is appropriate to conduct the trial. Please write five or six points with regard to your thoughts on this matter. What would you do and why? 
+  - Analyse the Toronto AirBNB dataset with guidance from the TA.
+  
+
+
+### Week 7
+
+'IJALM - It's Just A Linear Model'.
+
+- Content: [Linear and logistic regression and `tidymodels`](https://www.tellingstorieswithdata.com/its-just-a-linear-model.html)
+- Case Study: [Upworthy A/B tests of headlines](https://www.tellingstorieswithdata.com/hunt-data.html#case-study---upworthy).
+- Special guest: [Kathy Ge on experiments at Uber](https://youtu.be/UYzXElJTovg).
+- Lab recording:
+  - Following the guidance of the TA, please use Blogdown to create a simple website and then design and execute a simple A/B test for your website using Netlify.
+
+
+### Week 8
+
+'Celestial Navigation'.
+
+- Content: [Simulation](https://www.tellingstorieswithdata.com/r-essentials.html#simulating-data), [power](https://www.tellingstorieswithdata.com/its-just-a-linear-model.html#on-p-values), [RCTs](https://www.tellingstorieswithdata.com/hunt-data.html#experiments-and-randomised-controlled-trials), [A/B testing](https://www.tellingstorieswithdata.com/hunt-data.html#ab-testing).
+- Case Study: Please pick one chapter from Catherine D'Ignazio and Lauren F. Klein, *Data Feminism*, that is of interest to you and read it (freely available: https://data-feminism.mitpress.mit.edu).
+- Lab: 
+  - Following the guidance of the TA, please make a Shiny app that bundles a little data and some code and post it to shinyapps.com.
+
+
+### Week 9
+
+'Multilevel regression with post-stratification'
+
+- Lecture: [MRP](https://www.tellingstorieswithdata.com/multilevel-modelling-with-post-stratification.html).
+- Case Study: [Xbox paper](https://www.tellingstorieswithdata.com/multilevel-regression-with-post-stratification.html#case-study---xbox-paper)
+- Lab: Use MRP to forecast the 2020 US presidential election.
+
+
+
+### Week 10
+
+
+'Such a shame they'll never meet'.
+
+- Content: [Matching and difference in differences](https://www.tellingstorieswithdata.com/causality-from-observational-data.html#difference-in-differences). 
+- Case Study: [Funding of Clinical Trials and Reported Drug Efficacy](https://www.tellingstorieswithdata.com/causality-from-observational-data.html#case-study---funding-of-clinical-trials-and-reported-drug-efficacy)
+- Special guest: [Emily Riederer on observational causal inference](https://youtu.be/VP3BBZ7poc0).
+- Special guest: [Tamar Oostrom on funding of clinical trials](https://youtu.be/DdnpWS9Km5U).
+- Lab: 
+  - Following the guidance of the TA, please look at McClelland, Alexander, 2019, '"Lock This Whore Up": Legal Violence and Flows of Information Precipitating Personal Violence against People Criminalised for HIV-Related Crimes in Canada', *European Journal of Risk Regulation*, 10 (1), pp. 132-147. 
+  - Then look at Policing the Pandemic - https://www.policingthepandemic.ca/. Look into how they gathered their dataset and what it took to put this together. What is in the dataset and why? What is missing and why? How could this affect the results? How might similar biases enter into other datasets that you have used or read about? 
+  - Put together a brief model. You may like to write a short blog post about the biases and influences that are in this dataset (if you do that please do email a link to me out of interest). 
+  
+
+### Week 11
+
+'Why does it always rain on me?'.
+
+- Content: [Regression discontinuity](https://www.tellingstorieswithdata.com/causality-from-observational-data.html#regression-discontinuity-design) and [instrumental variables](https://www.tellingstorieswithdata.com/causality-from-observational-data.html#instrumental-variables).
+- Case Study: 
+  - James H. Ware, 1989, 'Investigating Therapies of Potentially Great Benefit: ECMO', *Statistical Science*, available [here](https://projecteuclid.org/journals/statistical-science/volume-4/issue-4/Investigating-Therapies-of-Potentially-Great-Benefit-ECMO/10.1214/ss/1177012384.full).
+  - Donald A. Berry, 1989, 'Comment: Ethics and ECMO', *Statistical Science*, available [here](https://projecteuclid.org/journals/statistical-science/volume-4/issue-4/Investigating-Therapies-of-Potentially-Great-Benefit--ECMO--Comment/10.1214/ss/1177012385.full).
+- Lab: 
+  - Following the guidance of the TA, please make an R package that bundles a little data and some code and add it to your GitHub. Don't forget to include at least one test.
+  
+
+### Week 12
+
+'Lorem ipsum'.
+
+- Content: [Text-as-data](https://www.tellingstorieswithdata.com/text-as-data.html).
+- Case Study: Kevin Munger, Patrick Egan, Jonathan Nagler, Jonathan Ronen, and Joshua A. Tucker, 2017, 'Political Knowledge and Misinformation in the Era of Social Media: Evidence From the 2015 UK Election'.
+- Lab: 
+  - Please form small groups and discuss, 'to what extent do quantitative methods merely project forward the past, and what implications does this have for our conduct as practitioners and consumers?'
+
+
+
+
+
+## Assessment
+
+### Summary
+
+
+| Item 								| Weight (%) | Due date |
+| ------------- | -------------:| -----:|
+| Weekly quiz 						| 20 		 | Weekly before the lecture |
+| Professional conduct			| 3 		 | Anytime during the teaching term |
+| Paper 1 							| 24 		 | End of Week 3 |
+| Paper 2 							| 24 		 | End of Week 6 |
+| Paper 3 							| 24 		 | End of Week 9 |
+| Final Paper (initial submission)  | 1 		 | End of Week 12 |
+| Final Paper (peer review) 		| 3 		 | Three days after that |
+| Final Paper 						| 25 		 | Ten days after that |
+
+
+
+### Weekly quizzes
+
+- Due date: Weekly before the lecture.
+- Weight: 20 per cent (no quiz in Week 1 or Week 12 and only best eight out of ten count.)
+- Task: Please complete a weekly quiz in Quercus.
+- Questions: The questions that form the quiz are drawn from those in the course notes.
+
+
+### Professional conduct
+
+- Due date: Anytime during the teaching term.
+- Weight: 3 per cent
+- Task: 
+    - We (optionally) use Slack to interact in this class. At some point during the teaching term, please use Slack to answer another student's question or otherwise similarly be generally helpful in a professional manner. When you do that, please share the comment into the 'Professional conduct' channel and @ me (hover on the message, click share message, type in the channel 'profession_conduct', add a message that @'s me, and click 'share'). You'll get the full mark just for one helpful interaction. (If you are opting out of using Slack - which is entirely fine - then instead, at some point in the term send me an email with a link that is relevant to the course materials and that I should add to the course notes. Please be clear that this is your 'professional conduct' submission by stating that in the subject line.)
+    - It will not be possible to get any of this mark if you behave unprofessionally at all during the term. That includes abusive/rude emails/messages.
+
+### Paper #1
+
+- Due date: End of Week 3.
+- Weight: 24 per cent (for Papers #1-#3 the best two of three count).
+- Task: ['Mandatory minimums'](https://www.tellingstorieswithdata.com/papers.html#mandatory-minimums)
+
+
+
+### Paper #2
+
+- Due date: End of Week 6.
+- Weight: 24 per cent (for Papers #1-#3 the best two of three counts).
+- Task: ['Mr Willis of Ohio'](https://www.tellingstorieswithdata.com/papers.html#mr-willis-of-ohio)
+
+
+### Paper #3
+
+- Due date: End of Week 9.
+- Weight: 24 per cent (for Papers #1-#3 the best two of three counts).
+- Task: ['Five Votes Down'](https://www.tellingstorieswithdata.com/papers.html#five-votes-down)
+
+
+
+### Final Paper
+
+- Due dates: 
+  - Initial submission: End of Week 12.
+  - Peer review: Three days after that.
+  - Final Paper: Ten days after that.
+- Weight: 29 per cent (4 per cent of this is for initial submission and peer review conducted a week before).
+  - Initial submission: 1 per cent
+  - Peer review: 3 per cent
+  - Final Paper: 25 per cent
+- Task: ['What's next'](https://www.tellingstorieswithdata.com/papers.html#whats-next)
+
+
+
